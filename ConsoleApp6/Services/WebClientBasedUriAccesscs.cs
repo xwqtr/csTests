@@ -10,15 +10,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp6.Services
 {
-    class WebClientBasedUriAccess : BaseApiAccessProvider
+    public class WebClientBasedUriAccess : BaseApiAccessProvider
     {
-
-        public string BaseAddress { get; set; }
-
         public WebClient _wc;
 
-        public WebClientBasedUriAccess(WebClient wc,string apiKey) :base(apiKey) {
-            _wc = wc;
+        public WebClientBasedUriAccess(string baseAddress,string apiKey) :base(apiKey) {
+            _wc = new WebClient()
+            {
+                BaseAddress = baseAddress
+            };
         }
         public override string CallUri(string uri)
         {

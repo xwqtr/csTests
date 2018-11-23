@@ -96,6 +96,7 @@
     <Compile Include="Models\WeatherData.cs" />
     <Compile Include="Services\WeatherWebService.cs" />
     <Compile Include="Services\WebClientBasedUriAccesscs.cs" />
+    <Compile Include="Services\WebRequestBasedUriAccess.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
