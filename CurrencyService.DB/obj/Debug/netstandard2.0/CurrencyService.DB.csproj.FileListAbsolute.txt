@@ -1,0 +1,6 @@
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.DB\bin\Debug\netstandard2.0\CurrencyService.DB.deps.json
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.DB\bin\Debug\netstandard2.0\CurrencyService.DB.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.DB\obj\Debug\netstandard2.0\CurrencyService.DB.csprojAssemblyReference.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.DB\obj\Debug\netstandard2.0\CurrencyService.DB.csproj.CoreCompileInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.DB\obj\Debug\netstandard2.0\CurrencyService.DB.AssemblyInfoInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.DB\obj\Debug\netstandard2.0\CurrencyService.DB.AssemblyInfo.cs
