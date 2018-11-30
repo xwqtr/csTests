@@ -1,6 +1,9 @@
-﻿namespace CurrencyService.Common.Interfaces
+﻿
+
+namespace CurrencyService.Common.Interfaces
 {
-    public interface IHistoricalTrade
+    using System;
+    public interface IHistoricalTrade : IEquatable<IHistoricalTrade>
     {
         string Price { get; set; }
         long Time { get; set; }
