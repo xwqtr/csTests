@@ -18,7 +18,7 @@ namespace CurrencyService.DB.Models
 
         public bool Equals(IHistoricalTrade other)
         {
-            return this.Price == other.Price && this.Time == other.Time && this.Count == other.Count && this.IsBought == other.IsBought;
+            return this.Time == other.Time && this.Price == other.Price &&  this.Count == other.Count && this.IsBought == other.IsBought;
         }
 
         public bool Equals(HistoricalTrade other)
