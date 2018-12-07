@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericLibraryParser", "Gen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonApiAccessProvider", "BaseApiAccessProvider\CommonApiAccessProvider.csproj", "{5C9F2626-A149-45AE-8E6E-6E985BB6ADB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyService.Binance", "CurrencyService.Binance\CurrencyService.Binance.csproj", "{B815DE98-3DCE-4C38-B52B-CBBA09DFB1D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyService.Binance", "CurrencyService.Binance\CurrencyService.Binance.csproj", "{B815DE98-3DCE-4C38-B52B-CBBA09DFB1D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyService.CoinMarketCap", "CurrencyService.CoinMarketCap\CurrencyService.CoinMarketCap.csproj", "{F40B00C1-3279-47C2-BA3A-8DC2F7614190}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{B815DE98-3DCE-4C38-B52B-CBBA09DFB1D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B815DE98-3DCE-4C38-B52B-CBBA09DFB1D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B815DE98-3DCE-4C38-B52B-CBBA09DFB1D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40B00C1-3279-47C2-BA3A-8DC2F7614190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40B00C1-3279-47C2-BA3A-8DC2F7614190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40B00C1-3279-47C2-BA3A-8DC2F7614190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40B00C1-3279-47C2-BA3A-8DC2F7614190}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

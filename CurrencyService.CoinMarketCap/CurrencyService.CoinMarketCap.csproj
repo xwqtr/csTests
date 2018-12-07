@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseApiAccessProvider\CommonApiAccessProvider.csproj" />
+    <ProjectReference Include="..\CurrencyService.Common\CurrencyService.Common.csproj" />
+  </ItemGroup>
+
+</Project>

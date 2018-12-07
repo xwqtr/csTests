@@ -2,7 +2,7 @@
 {
     using CurrencyService.Common.Interfaces;
     using System.Collections.Generic;
-    public partial class BinanceModel
+    public class BinanceModel
     {
         public class HistoricalTrade : IHistoricalTrade
         {
