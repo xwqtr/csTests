@@ -9,7 +9,6 @@
       "CurrencyService.Client/1.0.0": {
         "dependencies": {
           "CommonApiAccessProvider": "1.0.0",
-          "CurrencyService.Binance": "1.0.0",
           "CurrencyService.Common": "1.0.0",
           "CurrencyService.DAL": "1.0.0",
           "CurrencyService.DB": "1.0.0",
@@ -552,15 +551,6 @@
           "CommonApiAccessProvider.dll": {}
         }
       },
-      "CurrencyService.Binance/1.0.0": {
-        "dependencies": {
-          "CommonApiAccessProvider": "1.0.0",
-          "CurrencyService.Common": "1.0.0"
-        },
-        "runtime": {
-          "CurrencyService.Binance.dll": {}
-        }
-      },
       "CurrencyService.Common/1.0.0": {
         "runtime": {
           "CurrencyService.Common.dll": {}
@@ -586,6 +576,9 @@
         }
       },
       "GenericLibraryParser/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.2.0"
+        },
         "runtime": {
           "GenericLibraryParser.dll": {}
         }
@@ -991,11 +984,6 @@
       "hashPath": "system.threading.tasks.4.0.11.nupkg.sha512"
     },
     "CommonApiAccessProvider/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CurrencyService.Binance/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

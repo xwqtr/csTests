@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonApiAccessProvider", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyService.Binance", "CurrencyService.Binance\CurrencyService.Binance.csproj", "{B815DE98-3DCE-4C38-B52B-CBBA09DFB1D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyService.CoinMarketCap", "CurrencyService.CoinMarketCap\CurrencyService.CoinMarketCap.csproj", "{F40B00C1-3279-47C2-BA3A-8DC2F7614190}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyService.Poloniex", "CurrencyService.CoinMarketCap\CurrencyService.Poloniex.csproj", "{F40B00C1-3279-47C2-BA3A-8DC2F7614190}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

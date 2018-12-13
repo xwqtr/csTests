@@ -24,11 +24,13 @@
             var hts = historicalTrades
                 .Where(z => !_currencyDbContext.HistoricalTrades.Any(x => x.Equals(z)))
                 .Select(x => new HistoricalTrade()
-            {
-                Count = x.Count,
-                Time = x.Time,
-                IsBought = x.IsBought,
-                Price = x.Price
+                {
+                    Count = x.Count,
+                    Time = x.Time,
+                    IsBought = x.IsBought,
+                    Price = x.Price,
+                    CurrencyName = x.CurrencyName,
+                    CurrencyToConvertName = x.CurrencyToConvertName
             });
             _currencyDbContext.HistoricalTrades.AddRange(hts);
             _currencyDbContext.SaveChanges();

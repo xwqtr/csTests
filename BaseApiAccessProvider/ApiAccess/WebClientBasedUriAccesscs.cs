@@ -1,4 +1,5 @@
 ﻿using CommonApiAccessProvider.Abstracts;
+using CommonApiAccessProvider;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq.Expressions;
 
 namespace CommonApiAccessProvider.ApiAccess
 {
@@ -13,15 +15,16 @@ namespace CommonApiAccessProvider.ApiAccess
     {
         public WebClient _wc;
 
-        public WebClientBasedApiAccess(string baseAddress,string[] headers = null)  {
+        public WebClientBasedApiAccess(IApiAccessParameters parameters)
+        {
             _wc = new WebClient()
             {
-                BaseAddress = baseAddress
-                
+                BaseAddress = parameters.baseAddress
+
             };
-            if (headers != null)
+            if (parameters.headers != null)
             {
-                foreach (var h in headers)
+                foreach (var h in parameters.headers)
                 {
                     _wc.Headers.Add(h);
                 }

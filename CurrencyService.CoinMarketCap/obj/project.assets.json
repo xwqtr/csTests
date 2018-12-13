@@ -770,9 +770,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.CoinMarketCap\\CurrencyService.CoinMarketCap.csproj",
-      "projectName": "CurrencyService.CoinMarketCap",
-      "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.CoinMarketCap\\CurrencyService.CoinMarketCap.csproj",
+      "projectUniqueName": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.CoinMarketCap\\CurrencyService.Poloniex.csproj",
+      "projectName": "CurrencyService.Poloniex",
+      "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.CoinMarketCap\\CurrencyService.Poloniex.csproj",
       "packagesPath": "C:\\Users\\v-ilseka\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.CoinMarketCap\\obj\\",
       "projectStyle": "PackageReference",

@@ -959,20 +959,6 @@
           "bin/placeholder/CommonApiAccessProvider.dll": {}
         }
       },
-      "CurrencyService.Binance/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "CommonApiAccessProvider": "1.0.0",
-          "CurrencyService.Common": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/CurrencyService.Binance.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CurrencyService.Binance.dll": {}
-        }
-      },
       "CurrencyService.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1015,6 +1001,9 @@
       "GenericLibraryParser/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.2.0"
+        },
         "compile": {
           "bin/placeholder/GenericLibraryParser.dll": {}
         },
@@ -3583,11 +3572,6 @@
       "path": "../BaseApiAccessProvider/CommonApiAccessProvider.csproj",
       "msbuildProject": "../BaseApiAccessProvider/CommonApiAccessProvider.csproj"
     },
-    "CurrencyService.Binance/1.0.0": {
-      "type": "project",
-      "path": "../CurrencyService.Binance/CurrencyService.Binance.csproj",
-      "msbuildProject": "../CurrencyService.Binance/CurrencyService.Binance.csproj"
-    },
     "CurrencyService.Common/1.0.0": {
       "type": "project",
       "path": "../CurrencyService.Common/CurrencyService.Common.csproj",
@@ -3612,7 +3596,6 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "CommonApiAccessProvider >= 1.0.0",
-      "CurrencyService.Binance >= 1.0.0",
       "CurrencyService.Common >= 1.0.0",
       "CurrencyService.DAL >= 1.0.0",
       "CurrencyService.DB >= 1.0.0",
@@ -3657,9 +3640,6 @@
           "projectReferences": {
             "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\BaseApiAccessProvider\\CommonApiAccessProvider.csproj": {
               "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\BaseApiAccessProvider\\CommonApiAccessProvider.csproj"
-            },
-            "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.Binance\\CurrencyService.Binance.csproj": {
-              "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.Binance\\CurrencyService.Binance.csproj"
             },
             "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.Common\\CurrencyService.Common.csproj": {
               "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.Common\\CurrencyService.Common.csproj"

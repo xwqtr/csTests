@@ -1,0 +1,4 @@
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.CoinMarketCap\obj\Debug\netcoreapp2.1\CurrencyService.CryptoCompare.csprojAssemblyReference.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.CoinMarketCap\obj\Debug\netcoreapp2.1\CurrencyService.CryptoCompare.csproj.CoreCompileInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.CoinMarketCap\obj\Debug\netcoreapp2.1\CurrencyService.CryptoCompare.AssemblyInfoInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.CoinMarketCap\obj\Debug\netcoreapp2.1\CurrencyService.CryptoCompare.AssemblyInfo.cs

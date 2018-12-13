@@ -7,7 +7,7 @@
         public class HistoricalTrade : IHistoricalTrade
         {
             public int id { get; set; }
-            public string Price { get; set; }
+            public decimal Price { get; set; }
             public decimal qty { get; set; }
             public long Time { get; set; }
             public bool isBuyerMaker { get; set; }
@@ -16,6 +16,8 @@
 
             public bool IsBought { get { return isBuyerMaker; } set { isBuyerMaker = value; } }
 
+            public string CurrencyName { get; set ; }
+            public string CurrencyToConvertName { get; set; }
             public bool Equals(IHistoricalTrade other)
             {
                 throw new System.NotImplementedException();

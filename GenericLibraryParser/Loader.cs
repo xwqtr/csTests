@@ -5,7 +5,7 @@
     using System.IO;
     using System.Collections.Generic;
     using System.Linq;
-    public class Loader
+    class Loader
     {
         private readonly string _libsFolder;
         public Loader(string librariesFolder) {

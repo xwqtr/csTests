@@ -8,6 +8,6 @@ namespace CurrencyService.Common.Interfaces
     {
         T GetCurrencyExchangeInfo<T>();
 
-        IEnumerable<T> GetHistoricalTrades<T>(string currencyName) where T : IHistoricalTrade;
+        IEnumerable<T> GetHistoricalTrades<T>(string currencyName,string currencyToConvert) where T : IHistoricalTrade;
     }
 }

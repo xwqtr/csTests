@@ -19,12 +19,12 @@
             return _bah.GetData<T>("exchangeInfo");
         }
 
-        public IEnumerable<T> GetAllHistoricalTrades<T>(string currencyName) where T : IHistoricalTrade
+        public IEnumerable<T> GetAllHistoricalTrades<T>(string currencyName,string currencyToConvert) where T : IHistoricalTrade
         {
             //not used because API does not allow too many request
             int from = 1;
             var max = _bah
-                .GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"historicalTrades?symbol={currencyName}").Select(x => x.id).Max();
+                .GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"historicalTrades?symbol={currencyName}{currencyToConvert}").Select(x => x.id).Max();
             List<int> ranges = new List<int>();
             while (from < max)
             {
@@ -36,9 +36,9 @@
             return result;
         }
 
-        public IEnumerable<T> GetHistoricalTrades<T>(string currencyName) where T : IHistoricalTrade
+        public IEnumerable<T> GetHistoricalTrades<T>(string currencyName, string currencyToConvert) where T : IHistoricalTrade
         {
-            return _bah.GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"historicalTrades?symbol={currencyName}").Cast<T>();
+            return _bah.GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"historicalTrades?symbol={currencyName}{currencyToConvert}").Cast<T>();
         }
 
         private IEnumerable<T> GetHistoricalTrades<T>(string currencyName, long fromId,int limit = 1000) where T : IHistoricalTrade

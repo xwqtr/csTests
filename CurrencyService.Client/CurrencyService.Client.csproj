@@ -11,7 +11,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BaseApiAccessProvider\CommonApiAccessProvider.csproj" />
-    <ProjectReference Include="..\CurrencyService.Binance\CurrencyService.Binance.csproj" />
     <ProjectReference Include="..\CurrencyService.Common\CurrencyService.Common.csproj" />
     <ProjectReference Include="..\CurrencyService.DAL\CurrencyService.DAL.csproj" />
     <ProjectReference Include="..\CurrencyService.DB\CurrencyService.DB.csproj" />
