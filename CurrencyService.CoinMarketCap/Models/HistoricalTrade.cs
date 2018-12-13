@@ -4,7 +4,7 @@
     using System;
     public class CoinMarketCap
     {
-        private class HistoricalTrade : IHistoricalTrade
+        public class HistoricalTrade : IHistoricalTrade
         {
             public string Price { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
             public long Time { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

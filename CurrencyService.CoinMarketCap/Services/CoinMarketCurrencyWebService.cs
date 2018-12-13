@@ -3,7 +3,7 @@ using CurrencyService.Common.Interfaces;
 using System;
 using System.Collections.Generic;
 
-namespace CurrencyService.Services.CoinMarketCap
+namespace CurrencyService.CoinMarketCap
 {
     public class CoinMarketCurrencyWebService : ICurrencyWebService
     {
@@ -23,7 +23,7 @@ namespace CurrencyService.Services.CoinMarketCap
         public IEnumerable<T> GetHistoricalTrades<T>(string currencyName) where T : IHistoricalTrade
         {
             return _bah
-                .GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"historicalTrades?symbol={currencyName}&fromId={fromId}&limit={limit}")
+                .GetData<IEnumerable<Models.CoinMarketCap.HistoricalTrade>>($"historicalTrades?symbol={currencyName}&fromId={fromId}&limit={limit}")
                 .Cast<T>();
         }
     }
