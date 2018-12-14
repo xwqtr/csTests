@@ -770,11 +770,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.CoinMarketCap\\CurrencyService.Poloniex.csproj",
+      "projectUniqueName": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.Poloniex\\CurrencyService.Poloniex.csproj",
       "projectName": "CurrencyService.Poloniex",
-      "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.CoinMarketCap\\CurrencyService.Poloniex.csproj",
+      "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.Poloniex\\CurrencyService.Poloniex.csproj",
       "packagesPath": "C:\\Users\\v-ilseka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.CoinMarketCap\\obj\\",
+      "outputPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.Poloniex\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

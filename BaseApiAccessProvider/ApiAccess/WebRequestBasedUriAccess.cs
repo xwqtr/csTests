@@ -7,35 +7,27 @@
     using System.Threading.Tasks;
     using System.Net;
     using System.IO;
-    using CommonApiAccessProvider.Abstracts;
-
-    public class WebRequestBasedApiAccess : BaseApiAccessProvider
+    using CurrencyService.Common.Interfaces;
+    using Newtonsoft.Json;
+    public class WebRequestBasedApiAccess : IApiAccessProvider
     {
-        private readonly string _baseAddress;
-        private readonly string[] _headers;
-        public WebRequestBasedApiAccess(IApiAccessParameters parameters)
+
+        public T GetData<T>(string uri,string[] headers =null)
         {
-            _baseAddress = parameters.baseAddress;
-            _headers = parameters.headers;
-        }
-        
-        public override string CallUri(string uri)
-        {
-            var requestUri = new Uri(new Uri(_baseAddress), uri);
+            var requestUri = new Uri(uri);
             var request = (HttpWebRequest)WebRequest.Create(requestUri);
-            if (_headers != null)
+            if (headers != null)
             {
-                foreach (var h in _headers)
+                foreach (var h in headers)
                 {
                     request.Headers.Add(h);
                 }
             }
-            
-            
+
+
             var response = (HttpWebResponse)request.GetResponse();
             var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
-            return responseString;
+            return JsonConvert.DeserializeObject<T>(responseString);
         }
-
     }
 }

@@ -5,48 +5,52 @@
     using CurrencyService.Common.Interfaces;
     using CurrencyService.Binance.Models;
     using System.Threading.Tasks;
-    using CommonApiAccessProvider.Abstracts;
+
     public class BinanceCurrencyWebService : ICurrencyWebService
     {
-        private readonly BaseApiAccessProvider _bah;
-        public BinanceCurrencyWebService(BaseApiAccessProvider bah) 
+        private readonly IApiAccessProvider _aap;
+
+        private readonly IApiAccessParameters _apiAccessParameters;
+        public BinanceCurrencyWebService(IApiAccessProvider aap) 
         {
-            _bah = bah;
+            _aap = aap;
+            _apiAccessParameters = new BinanceApiAccessParameters();
         }
 
         public T GetCurrencyExchangeInfo<T>()
         {
-            return _bah.GetData<T>("exchangeInfo");
-        }
-
-        public IEnumerable<T> GetAllHistoricalTrades<T>(string currencyName,string currencyToConvert) where T : IHistoricalTrade
-        {
-            //not used because API does not allow too many request
-            int from = 1;
-            var max = _bah
-                .GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"historicalTrades?symbol={currencyName}{currencyToConvert}").Select(x => x.id).Max();
-            List<int> ranges = new List<int>();
-            while (from < max)
-            {
-                ranges.Add(from);
-                from += 1000;
-            }
-            var result = new List<T>();
-            ranges.AsParallel().ForAll(x => { result.AddRange(this.GetHistoricalTrades<T>(currencyName, x)); });
-            return result;
+            return _aap.GetData<T>("exchangeInfo");
         }
 
         public IEnumerable<T> GetHistoricalTrades<T>(string currencyName, string currencyToConvert) where T : IHistoricalTrade
         {
-            return _bah.GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"historicalTrades?symbol={currencyName}{currencyToConvert}").Cast<T>();
+            IEnumerable<IHistoricalTrade> result;
+            try
+            {
+                var data =  _aap.GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"{_apiAccessParameters.baseAddress}historicalTrades?symbol={currencyName}{currencyToConvert}", _apiAccessParameters.headers);
+                
+                foreach (var x in data)
+                {
+                    x.CurrencyName = currencyName;
+                    x.CurrencyToConvertName = currencyToConvert;
+                }
+                return data.Cast<T>();
+            }
+            catch
+            {
+                var data =  _aap.GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"{_apiAccessParameters.baseAddress}historicalTrades?symbol={currencyToConvert}{currencyName}", _apiAccessParameters.headers);
+
+                foreach (var x in data)
+                {
+                    x.CurrencyName = currencyToConvert;
+                    x.CurrencyToConvertName = currencyName;
+                }
+                return data.Cast<T>();
+            }
+            
         }
 
-        private IEnumerable<T> GetHistoricalTrades<T>(string currencyName, long fromId,int limit = 1000) where T : IHistoricalTrade
-        {
-            return _bah
-                .GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"historicalTrades?symbol={currencyName}&fromId={fromId}&limit={limit}")
-                .Cast<T>();
-        }
+        
 
         
     }
