@@ -13,7 +13,7 @@
     using System.Diagnostics;
     using System.IO;
     using System.Linq;
-
+    using Microsoft.Extensions.Hosting;
     class Start
     {
         static void Main(string[] args)
@@ -24,14 +24,29 @@
             {
                 Debugger.Launch();
                 var whb = new WebHostBuilder()
+                    .ConfigureServices(z=>z.AddTransientFromLibrary<ICurrencyWebService>(Directory.GetCurrentDirectory() + "\\CurrencyServices")
+                    .AddTransient<IApiAccessProvider, WebRequestBasedApiAccess>()
+                    .AddDbContext<CurrencyDbContext>(x => x.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Currencies;Trusted_Connection=True;"))
+                    .AddSingleton<DbWriteService>()
+                    .AddHostedService<CurrencyRefreshHostService>())
                     .UseContentRoot(Directory.GetCurrentDirectory())
-                    .ConfigureServices(x => GetSP())
+                    .UseStartup<Startup>()
+                    .UseKestrel()
                     .Build();
                 whb.Run();
             }
             else
             {
-                var whb = new WebHostBuilder().UseContentRoot(pathToContentRoot).ConfigureServices(x => GetSP()).Build();
+                var whb = new WebHostBuilder()
+                    .ConfigureServices(z => z.AddTransientFromLibrary<ICurrencyWebService>(Directory.GetCurrentDirectory() + "\\CurrencyServices")
+                    .AddTransient<IApiAccessProvider, WebRequestBasedApiAccess>()
+                    .AddDbContext<CurrencyDbContext>(x => x.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Currencies;Trusted_Connection=True;"))
+                    .AddSingleton<DbWriteService>()
+                    .AddHostedService<CurrencyRefreshHostService>())
+                    .UseContentRoot(pathToContentRoot)
+                    .UseStartup<Startup>()
+                    .UseKestrel()
+                    .Build();
                 whb.RunAsService();
             }
             
@@ -39,18 +54,6 @@
         }
 
 
-        public static ServiceProvider GetSP()
-        {
-
-           
-            var sp =
-             new ServiceCollection()
-                .AddTransientFromLibrary<ICurrencyWebService>(Directory.GetCurrentDirectory() + "\\CurrencyServices")
-                .AddTransient<IApiAccessProvider, WebRequestBasedApiAccess>()
-                .AddDbContext<CurrencyDbContext>(x => x.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Currencies;Trusted_Connection=True;"))
-                .AddSingleton<DbWriteService>()
-                .BuildServiceProvider();
-            return sp;
-        }
+        
     }
 }
