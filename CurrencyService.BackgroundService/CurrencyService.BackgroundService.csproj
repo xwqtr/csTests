@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.WindowsServices" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseApiAccessProvider\CommonApiAccessProvider.csproj" />
+    <ProjectReference Include="..\CurrencyService.Common\CurrencyService.Common.csproj" />
+    <ProjectReference Include="..\CurrencyService.DAL\CurrencyService.DAL.csproj" />
+    <ProjectReference Include="..\CurrencyService.DB\CurrencyService.DB.csproj" />
+    <ProjectReference Include="..\GenericLibraryParser\GenericLibraryParser.csproj" />
+  </ItemGroup>
+
+</Project>

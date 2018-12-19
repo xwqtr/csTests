@@ -11,20 +11,16 @@
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
+    using CurrencyService.DB.Models;
 
     internal class Program
     {
         private static void Main(string[] args)
         {
-            string c1 = "ETH";
-            string c2 = "BTC";
+           
             ServiceProvider sp = GetSP();
-            var wwss = sp.GetServices<ICurrencyWebService>();
-            var data = wwss.AsParallel().SelectMany(x =>x.GetHistoricalTrades<IHistoricalTrade>(c1, c2));
-            DbWriteService dws = sp.GetService<DbWriteService>();
-            dws.WriteHistoricalTrades(data);
             DbReadService drs = sp.GetService<DbReadService>();
-            IEnumerable<CurrencyService.DB.Models.HistoricalTrade> hTradesFromDatabase = drs.GetHistoricalTrades();
+            IEnumerable<HistoricalTrade> hTradesFromDatabase = drs.GetHistoricalTrades();
             decimal getMaxPrice = drs.GetHistoricalTrades().Max(x => x.Price);
         }
 
@@ -33,11 +29,8 @@
         {
             var sp=
              new ServiceCollection()
-                .AddTransientFromLibrary<ICurrencyWebService>(Directory.GetCurrentDirectory() + "\\CurrencyServices")
-                .AddTransient<IApiAccessProvider, WebRequestBasedApiAccess>()
-                .AddDbContext<CurrencyDbContext>(x => x.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Currencies;Trusted_Connection=True;"))
-                .AddSingleton<DbWriteService>()
                 .AddSingleton<DbReadService>()
+                .AddDbContext<CurrencyDbContext>(x => x.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Currencies;Trusted_Connection=True;"))
                 .BuildServiceProvider();
             return sp;
         }
