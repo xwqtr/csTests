@@ -1,0 +1,14 @@
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\bin\Debug\netcoreapp2.1\win10-x64\CurrencyService.Binance.deps.json
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\bin\Debug\netcoreapp2.1\win10-x64\CurrencyService.Binance.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\bin\Debug\netcoreapp2.1\win10-x64\CurrencyService.Binance.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\bin\Debug\netcoreapp2.1\win10-x64\CommonApiAccessProvider.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\bin\Debug\netcoreapp2.1\win10-x64\CurrencyService.Common.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\bin\Debug\netcoreapp2.1\win10-x64\CommonApiAccessProvider.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\bin\Debug\netcoreapp2.1\win10-x64\CurrencyService.Common.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\obj\Debug\netcoreapp2.1\win10-x64\CurrencyService.Binance.csprojAssemblyReference.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\obj\Debug\netcoreapp2.1\win10-x64\CurrencyService.Binance.csproj.CoreCompileInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\obj\Debug\netcoreapp2.1\win10-x64\CurrencyService.Binance.AssemblyInfoInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\obj\Debug\netcoreapp2.1\win10-x64\CurrencyService.Binance.AssemblyInfo.cs
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\obj\Debug\netcoreapp2.1\win10-x64\CurrencyService.Binance.csproj.CopyComplete
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\obj\Debug\netcoreapp2.1\win10-x64\CurrencyService.Binance.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Binance\obj\Debug\netcoreapp2.1\win10-x64\CurrencyService.Binance.pdb

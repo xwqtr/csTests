@@ -21,8 +21,9 @@
         public void WriteHistoricalTrades<T>(IEnumerable<T> historicalTrades) where T : IHistoricalTrade
         {
             var minTime = historicalTrades.Min(x => x.Time);
+            var temp = _currencyDbContext.HistoricalTrades.Where(c => c.Time >= minTime).ToList();
             var hts = historicalTrades
-                .Where(z => !_currencyDbContext.HistoricalTrades.Where(c=>c.Time>= minTime).Any(x => x.Equals(z)))
+                .Where(z => !temp.Any(x => x.Equals(z)))
                 .Select(x => new HistoricalTrade()
                 {
                     Count = x.Count,

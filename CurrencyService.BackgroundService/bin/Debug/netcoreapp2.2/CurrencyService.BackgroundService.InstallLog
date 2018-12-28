@@ -1,0 +1,58 @@
+﻿Installing assembly 'C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.InstallLog
+   assemblypath = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll
+An exception occurred while trying to find the installers in the C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll assembly.
+System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+Aborting installation for C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll.
+Rolling back assembly 'C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.InstallLog
+   assemblypath = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll
+An exception occurred while trying to find the installers in the C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll assembly.
+System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+Aborting installation for C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll.
+Uninstalling assembly 'C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.InstallLog
+   assemblypath = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll
+An exception occurred while trying to find the installers in the C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll assembly.
+System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+Aborting installation for C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll.
+Installing assembly 'C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.InstallLog
+   assemblypath = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll
+   logtoconsole = 
+An exception occurred while trying to find the installers in the C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll assembly.
+System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+Aborting installation for C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll.
+Rolling back assembly 'C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.InstallLog
+   assemblypath = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll
+   logtoconsole = 
+An exception occurred while trying to find the installers in the C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll assembly.
+System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+Aborting installation for C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll.
+Installing assembly 'C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.InstallLog
+   assemblypath = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll
+An exception occurred while trying to find the installers in the C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll assembly.
+System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+Aborting installation for C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll.
+Rolling back assembly 'C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.InstallLog
+   assemblypath = C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll
+An exception occurred while trying to find the installers in the C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll assembly.
+System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+Aborting installation for C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.dll.

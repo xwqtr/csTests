@@ -1,0 +1,9 @@
+C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\bin\Debug\netcoreapp2.1\win10-x64\GenericLibraryParser.deps.json
+C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\bin\Debug\netcoreapp2.1\win10-x64\GenericLibraryParser.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\bin\Debug\netcoreapp2.1\win10-x64\GenericLibraryParser.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.1\win10-x64\GenericLibraryParser.csprojAssemblyReference.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.1\win10-x64\GenericLibraryParser.csproj.CoreCompileInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.1\win10-x64\GenericLibraryParser.AssemblyInfoInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.1\win10-x64\GenericLibraryParser.AssemblyInfo.cs
+C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.1\win10-x64\GenericLibraryParser.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.1\win10-x64\GenericLibraryParser.pdb
