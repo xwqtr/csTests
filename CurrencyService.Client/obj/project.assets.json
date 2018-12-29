@@ -194,6 +194,19 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.Logging.Configuration/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.1.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {}
+        }
+      },
       "Microsoft.Extensions.Options/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -205,6 +218,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.1.0",
+          "Microsoft.Extensions.Configuration.Binder": "2.1.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0",
+          "Microsoft.Extensions.Options": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
         }
       },
       "Microsoft.Extensions.Primitives/2.1.1": {
@@ -513,6 +541,52 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "Sentry/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "Sentry.PlatformAbstractions": "1.0.0",
+          "Sentry.Protocol": "1.0.2",
+          "System.Collections.Immutable": "1.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sentry.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sentry.dll": {}
+        }
+      },
+      "Sentry.Extensions.Logging/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Configuration": "2.1.0",
+          "Sentry": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sentry.Extensions.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sentry.Extensions.Logging.dll": {}
+        }
+      },
+      "Sentry.PlatformAbstractions/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Sentry.PlatformAbstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sentry.PlatformAbstractions.dll": {}
+        }
+      },
+      "Sentry.Protocol/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Sentry.Protocol.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sentry.Protocol.dll": {}
         }
       },
       "System.Collections/4.0.11": {
@@ -1229,6 +1303,19 @@
         "microsoft.extensions.logging.abstractions.nuspec"
       ]
     },
+    "Microsoft.Extensions.Logging.Configuration/2.1.0": {
+      "sha512": "eQxOzAS9NMTuHIik0nSp0nw21UXSpKJpAYuFwPdi76lQ/dzpPmiR3bMY4qhocGmgVO4RI1JcGFyCj9Xj7ht7zg==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.configuration/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.xml",
+        "microsoft.extensions.logging.configuration.2.1.0.nupkg.sha512",
+        "microsoft.extensions.logging.configuration.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Options/2.1.1": {
       "sha512": "V7lXCU78lAbzaulCGFKojcCyG8RTJicEbiBkPJjFqiqXwndEBBIehdXRMWEVU3UtzQ1yDvphiWUL9th6/4gJ7w==",
       "type": "package",
@@ -1240,6 +1327,19 @@
         "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
         "microsoft.extensions.options.2.1.1.nupkg.sha512",
         "microsoft.extensions.options.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/2.1.0": {
+      "sha512": "kqYb+lqnM+pny7F/8ecLFcNN5pGrlmsNPG3Q4ywXNkGdQCyrDFRtHO1mjUOs/9WfKA9hxqtswmtXGXODGDeBgg==",
+      "type": "package",
+      "path": "microsoft.extensions.options.configurationextensions/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
+        "microsoft.extensions.options.configurationextensions.2.1.0.nupkg.sha512",
+        "microsoft.extensions.options.configurationextensions.nuspec"
       ]
     },
     "Microsoft.Extensions.Primitives/2.1.1": {
@@ -1876,6 +1976,77 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Sentry/1.1.0": {
+      "sha512": "Ffg/xCtu9Y1l0H7/Ewwicu2YD8ts839ZrAdcOR8NoX0HfvS9dp5r2A9iEbWtJJ5zWWtcF/Y19bpvtCIRzUGHEg==",
+      "type": "package",
+      "path": "sentry/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Sentry.dll",
+        "lib/net461/Sentry.pdb",
+        "lib/net461/Sentry.xml",
+        "lib/netstandard2.0/Sentry.dll",
+        "lib/netstandard2.0/Sentry.pdb",
+        "lib/netstandard2.0/Sentry.xml",
+        "sentry.1.1.0.nupkg.sha512",
+        "sentry.nuspec"
+      ]
+    },
+    "Sentry.Extensions.Logging/1.1.0": {
+      "sha512": "NrooWjFBmBB+UlyvEIOepyPLlbSQOLSgeLQimyiDRELUYPNUWkzZIwwzKLuDBY4Q3FtBG/iazt4LhOcxmWDN5w==",
+      "type": "package",
+      "path": "sentry.extensions.logging/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Sentry.Extensions.Logging.dll",
+        "lib/netstandard2.0/Sentry.Extensions.Logging.pdb",
+        "lib/netstandard2.0/Sentry.Extensions.Logging.xml",
+        "sentry.extensions.logging.1.1.0.nupkg.sha512",
+        "sentry.extensions.logging.nuspec"
+      ]
+    },
+    "Sentry.PlatformAbstractions/1.0.0": {
+      "sha512": "d5eFP0i9lDbZ+wXiZ7M9MfU09iLuRviIxXgFyAg0vRSoHCubi/KNb1wCRoX60tE6HQZMwtSseGa0LnLABMjI8Q==",
+      "type": "package",
+      "path": "sentry.platformabstractions/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/Sentry.PlatformAbstractions.dll",
+        "lib/net40/Sentry.PlatformAbstractions.dll",
+        "lib/net45/Sentry.PlatformAbstractions.dll",
+        "lib/net471/Sentry.PlatformAbstractions.dll",
+        "lib/netstandard1.5/Sentry.PlatformAbstractions.dll",
+        "lib/netstandard2.0/Sentry.PlatformAbstractions.dll",
+        "sentry.platformabstractions.1.0.0.nupkg.sha512",
+        "sentry.platformabstractions.nuspec"
+      ]
+    },
+    "Sentry.Protocol/1.0.2": {
+      "sha512": "nZxCrw11K+mk74EAKfEv+RO9L42xokrmKwNQ0MarzphxgJZ8p040C/HUJMbgdf48ARKUNOAnSf5bm9emP9yYfA==",
+      "type": "package",
+      "path": "sentry.protocol/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Sentry.Protocol.dll",
+        "lib/net45/Sentry.Protocol.pdb",
+        "lib/net45/Sentry.Protocol.xml",
+        "lib/net46/Sentry.Protocol.dll",
+        "lib/net46/Sentry.Protocol.pdb",
+        "lib/net46/Sentry.Protocol.xml",
+        "lib/netstandard1.3/Sentry.Protocol.dll",
+        "lib/netstandard1.3/Sentry.Protocol.pdb",
+        "lib/netstandard1.3/Sentry.Protocol.xml",
+        "lib/netstandard2.0/Sentry.Protocol.dll",
+        "lib/netstandard2.0/Sentry.Protocol.pdb",
+        "lib/netstandard2.0/Sentry.Protocol.xml",
+        "sentry.protocol.1.0.2.nupkg.sha512",
+        "sentry.protocol.nuspec"
       ]
     },
     "System.Collections/4.0.11": {
@@ -3635,7 +3806,8 @@
       "CurrencyService.DB >= 1.0.0",
       "GenericLibraryParser >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection >= 2.2.0",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Sentry.Extensions.Logging >= 1.1.0"
     ]
   },
   "packageFolders": {
@@ -3708,6 +3880,10 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Sentry.Extensions.Logging": {
+            "target": "Package",
+            "version": "[1.1.0, )"
           }
         },
         "imports": [

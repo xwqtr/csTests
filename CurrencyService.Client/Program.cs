@@ -14,48 +14,77 @@
     using CurrencyService.DB.Models;
     using System;
     using System.Threading;
+    using Microsoft.Extensions.Logging;
+    using Sentry.Extensions.Logging;
+    using Sentry;
 
     public class Program
     {
         private static Timer _timer;
 
 
-        public ServiceProvider _sp;
-        public DbReadService _drs;
+        private static ServiceProvider _sp;
+        private readonly DbReadService _drs;
         public Program()
         {
-            _sp = GetSP();
             _drs = _sp.GetService<DbReadService>();
-            _timer = new Timer(BGJOB, null, TimeSpan.Zero, TimeSpan.FromSeconds(15));
+            
             
         }
         public static void Main(string[] args)
         {
-            new Program();
+            _sp = GetSP();
+            var p =  _sp.GetService<Program>();
+            p.Run();
             Thread.Sleep(Timeout.Infinite);
+            
+           
+        }
+
+        public void Run()
+        {
+            _timer = new Timer(BGJOB, null, TimeSpan.Zero, TimeSpan.FromSeconds(15));
         }
 
         public static ServiceProvider GetSP()
         {
             var sp=
              new ServiceCollection()
+                .AddLogging(x=>x.AddSentry(z=> {
+                    z.Dsn = "https://6c8eb9aa732e4eefbbf2203893346e9c:31cb8dde16394c0ea0a70937364aa6f9@sentry.io/1361808";
+                }))
+                .AddSingleton<Program>()
                 .AddSingleton<DbReadService>()
                 .AddDbContext<CurrencyDbContext>(x => x.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Currencies;Trusted_Connection=True;"))
                 .BuildServiceProvider();
             return sp;
         }
 
-        public void BGJOB(object state) {
-            var getMaxPrice = _drs.GetHistoricalTrades().GroupBy(x => x.CurrencyName).Select(x => new {
-                x.Key,
-                MaxPrice = x.Max(z => z.Price),
-                AveragePrice = x.Average(z=>z.Price)
-            });
-            foreach (var p in getMaxPrice)
+        public void BGJOB(object state)
+        {
+
+            try
             {
-                Console.WriteLine($"Hey! MaxPrice For{p.Key} is {p.MaxPrice}, AveragePrice is  {p.AveragePrice}");
+                var getMaxPrice = _drs
+                    .GetHistoricalTrades()
+                    .GroupBy(x => x.CurrencyName)
+                    .Select(x => new
+                {
+                    x.Key,
+                    MaxPrice = x.Max(z => z.Price),
+                    AveragePrice = x.Average(z => z.Price)
+                });
+                foreach (var p in getMaxPrice)
+                {
+                    Console.WriteLine($"Hey! MaxPrice For{p.Key} is {p.MaxPrice}, AveragePrice is  {p.AveragePrice}");
+                }
             }
-            
+            catch (Exception e)
+            {
+                new SentryEvent(e);
+            }
+
+
         }
 
 
