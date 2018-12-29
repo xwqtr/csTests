@@ -17,17 +17,17 @@
             _apiAccessParameters = new BinanceApiAccessParameters();
         }
 
-        public T GetCurrencyExchangeInfo<T>()
+        public async Task<T> GetCurrencyExchangeInfo<T>()
         {
-            return _aap.GetData<T>("exchangeInfo");
+            return await _aap.GetData<T>("exchangeInfo");
         }
 
-        public IEnumerable<T> GetHistoricalTrades<T>(string currencyName, string currencyToConvert) where T : IHistoricalTrade
+        public async Task<IEnumerable<T>> GetHistoricalTrades<T>(string currencyName, string currencyToConvert) where T : IHistoricalTrade
         {
             IEnumerable<IHistoricalTrade> result;
             try
             {
-                var data =  _aap.GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"{_apiAccessParameters.baseAddress}historicalTrades?symbol={currencyName}{currencyToConvert}", _apiAccessParameters.headers);
+                var data = await _aap.GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"{_apiAccessParameters.baseAddress}historicalTrades?symbol={currencyName}{currencyToConvert}", _apiAccessParameters.headers);
                 
                 foreach (var x in data)
                 {
@@ -38,7 +38,7 @@
             }
             catch
             {
-                var data =  _aap.GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"{_apiAccessParameters.baseAddress}historicalTrades?symbol={currencyToConvert}{currencyName}", _apiAccessParameters.headers);
+                var data = await _aap.GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"{_apiAccessParameters.baseAddress}historicalTrades?symbol={currencyToConvert}{currencyName}", _apiAccessParameters.headers);
 
                 foreach (var x in data)
                 {
@@ -49,8 +49,6 @@
             }
             
         }
-
-        
 
         
     }

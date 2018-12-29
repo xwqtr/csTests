@@ -5,6 +5,6 @@ namespace CurrencyService.Common.Interfaces
 
     public interface IApiAccessProvider
     {
-        T GetData<T>(string uri, string[] headers = null);
+        Task<T> GetData<T>(string uri, string[] headers = null);
     }
 }

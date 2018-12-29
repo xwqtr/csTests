@@ -7,6 +7,8 @@ namespace CurrencyService.Poloniex
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Threading.Tasks;
+
     public class PoloniexCurrencyWebService : ICurrencyWebService
     {
         private readonly IApiAccessProvider _aap;
@@ -16,17 +18,17 @@ namespace CurrencyService.Poloniex
             _aap = aap;
             _apiAccessParameters = new PoloniexApiAccessParameters();
         }
-        public T GetCurrencyExchangeInfo<T>()
+        public async Task<T> GetCurrencyExchangeInfo<T>()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<T> GetHistoricalTrades<T>(string currencyName,string currencyToConvert) where T : IHistoricalTrade
+        public async Task<IEnumerable<T>> GetHistoricalTrades<T>(string currencyName,string currencyToConvert) where T : IHistoricalTrade
         {
             IEnumerable<IHistoricalTrade> result;
             try
             {
-                var data = _aap.GetData<IEnumerable<Models.Poloniex.HistoricalTrade>>($"{_apiAccessParameters.baseAddress}public?command=returnTradeHistory&currencyPair={currencyName}_{currencyToConvert}", _apiAccessParameters.headers);
+                var data = await _aap.GetData<IEnumerable<Models.Poloniex.HistoricalTrade>>($"{_apiAccessParameters.baseAddress}public?command=returnTradeHistory&currencyPair={currencyName}_{currencyToConvert}", _apiAccessParameters.headers);
 
                 foreach (var x in data)
                 {
@@ -37,7 +39,7 @@ namespace CurrencyService.Poloniex
             }
             catch
             {
-                var data = _aap.GetData<IEnumerable<Models.Poloniex.HistoricalTrade>>($"{_apiAccessParameters.baseAddress}public?command=returnTradeHistory&currencyPair={currencyToConvert}_{currencyName}", _apiAccessParameters.headers);
+                var data = await _aap.GetData<IEnumerable<Models.Poloniex.HistoricalTrade>>($"{_apiAccessParameters.baseAddress}public?command=returnTradeHistory&currencyPair={currencyToConvert}_{currencyName}", _apiAccessParameters.headers);
                 foreach (var x in data)
                 {
                     x.CurrencyName = currencyToConvert;

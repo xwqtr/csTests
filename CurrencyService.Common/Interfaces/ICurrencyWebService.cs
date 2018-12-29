@@ -6,8 +6,8 @@ namespace CurrencyService.Common.Interfaces
 
     public interface ICurrencyWebService
     {
-        T GetCurrencyExchangeInfo<T>();
+        Task<T> GetCurrencyExchangeInfo<T>();
 
-        IEnumerable<T> GetHistoricalTrades<T>(string currencyName,string currencyToConvert) where T : IHistoricalTrade;
+        Task<IEnumerable<T>> GetHistoricalTrades<T>(string currencyName,string currencyToConvert) where T : IHistoricalTrade;
     }
 }

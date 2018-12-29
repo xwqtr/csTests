@@ -14,7 +14,7 @@ namespace CommonApiAccessProvider.ApiAccess
 {
     public class WebClientBasedApiAccess : IApiAccessProvider
     {
-        public T GetData<T>(string uri, string[] headers = null)
+        public async Task<T> GetData<T>(string uri, string[] headers = null)
         {
             using (WebClient wc = new WebClient())
             {
@@ -25,9 +25,9 @@ namespace CommonApiAccessProvider.ApiAccess
                         wc.Headers.Add(h);
                     }
                 }
-                Stream data = wc.OpenRead(uri);
+                Stream data = await wc.OpenReadTaskAsync(uri);
                 StreamReader reader = new StreamReader(data);
-                string s = reader.ReadToEnd();
+                string s = await reader.ReadToEndAsync();
                 data.Close();
                 reader.Close();
                 return JsonConvert.DeserializeObject<T>(s);

@@ -55,9 +55,9 @@
 
         }
 
-        private void RefreshDbData(string currency1, string currencyToCompare)
+        private async void RefreshDbData(string currency1, string currencyToCompare)
         {
-            var data = _currencyWebServices.AsParallel().SelectMany(x => x.GetHistoricalTrades<IHistoricalTrade>(currency1, currencyToCompare)).ToList();
+            var data = (await Task.WhenAll(_currencyWebServices.Select(x =>x.GetHistoricalTrades<IHistoricalTrade>(currency1, currencyToCompare)))).SelectMany(x=>x);
             _dbWrite.WriteHistoricalTrades(data);
         }
 

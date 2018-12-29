@@ -12,7 +12,7 @@
     public class WebRequestBasedApiAccess : IApiAccessProvider
     {
 
-        public T GetData<T>(string uri,string[] headers =null)
+        public async Task<T> GetData<T>(string uri,string[] headers =null)
         {
             var requestUri = new Uri(uri);
             var request = (HttpWebRequest)WebRequest.Create(requestUri);
@@ -26,7 +26,8 @@
 
 
             var response = (HttpWebResponse)request.GetResponse();
-            var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+            var sr = new StreamReader(response.GetResponseStream());
+            var responseString = await sr.ReadToEndAsync();
             return JsonConvert.DeserializeObject<T>(responseString);
         }
     }

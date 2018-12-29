@@ -19,7 +19,6 @@ C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Poloniex\bin\Debug\netc
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Poloniex\bin\Debug\netcoreapp2.1\CurrencyService.Common.dll
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Poloniex\bin\Debug\netcoreapp2.1\CommonApiAccessProvider.pdb
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Poloniex\bin\Debug\netcoreapp2.1\CurrencyService.Common.pdb
-C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Poloniex\obj\Debug\netcoreapp2.1\CurrencyService.Poloniex.csprojAssemblyReference.cache
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Poloniex\obj\Debug\netcoreapp2.1\CurrencyService.Poloniex.csproj.CoreCompileInputs.cache
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Poloniex\obj\Debug\netcoreapp2.1\CurrencyService.Poloniex.AssemblyInfoInputs.cache
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Poloniex\obj\Debug\netcoreapp2.1\CurrencyService.Poloniex.AssemblyInfo.cs

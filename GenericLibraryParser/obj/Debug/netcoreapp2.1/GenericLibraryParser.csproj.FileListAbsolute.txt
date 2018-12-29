@@ -1,7 +1,6 @@
 C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\bin\Debug\netcoreapp2.1\GenericLibraryParser.deps.json
 C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\bin\Debug\netcoreapp2.1\GenericLibraryParser.dll
 C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\bin\Debug\netcoreapp2.1\GenericLibraryParser.pdb
-C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.1\GenericLibraryParser.csprojAssemblyReference.cache
 C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.1\GenericLibraryParser.csproj.CoreCompileInputs.cache
 C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.1\GenericLibraryParser.AssemblyInfoInputs.cache
 C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.1\GenericLibraryParser.AssemblyInfo.cs
