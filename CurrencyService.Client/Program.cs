@@ -12,18 +12,28 @@
     using System.IO;
     using System.Linq;
     using CurrencyService.DB.Models;
+    using System;
+    using System.Threading;
 
-    internal class Program
+    public class Program
     {
-        private static void Main(string[] args)
-        {
-           
-            ServiceProvider sp = GetSP();
-            DbReadService drs = sp.GetService<DbReadService>();
-            IEnumerable<HistoricalTrade> hTradesFromDatabase = drs.GetHistoricalTrades();
-            decimal getMaxPrice = drs.GetHistoricalTrades().Max(x => x.Price);
-        }
+        private static Timer _timer;
 
+
+        public ServiceProvider _sp;
+        public DbReadService _drs;
+        public Program()
+        {
+            _sp = GetSP();
+            _drs = _sp.GetService<DbReadService>();
+            _timer = new Timer(BGJOB, null, TimeSpan.Zero, TimeSpan.FromSeconds(15));
+            
+        }
+        public static void Main(string[] args)
+        {
+            new Program();
+            Thread.Sleep(Timeout.Infinite);
+        }
 
         public static ServiceProvider GetSP()
         {
@@ -35,6 +45,18 @@
             return sp;
         }
 
+        public void BGJOB(object state) {
+            var getMaxPrice = _drs.GetHistoricalTrades().GroupBy(x => x.CurrencyName).Select(x => new {
+                x.Key,
+                MaxPrice = x.Max(z => z.Price),
+                AveragePrice = x.Average(z=>z.Price)
+            });
+            foreach (var p in getMaxPrice)
+            {
+                Console.WriteLine($"Hey! MaxPrice For{p.Key} is {p.MaxPrice}, AveragePrice is  {p.AveragePrice}");
+            }
+            
+        }
 
 
 
