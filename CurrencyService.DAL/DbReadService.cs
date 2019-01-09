@@ -8,14 +8,17 @@
     using System.Linq.Expressions;
     using CurrencyService.Common.Interfaces;
     using CurrencyService.DB.Models;
+    using Microsoft.Extensions.Logging;
+    
 
     public class DbReadService
     {
         private readonly CurrencyDbContext _currencyDbContext;
-        public DbReadService(CurrencyDbContext currencyDbContext)
+        public DbReadService(CurrencyDbContext currencyDbContext, ILogger<DbReadService> logger)
         {
             _currencyDbContext = currencyDbContext;
-
+            logger.LogInformation($"WOW {nameof(DbReadService)} created!");
+        
         }
 
 

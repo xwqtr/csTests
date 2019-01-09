@@ -15,19 +15,20 @@
     using System;
     using System.Threading;
     using Microsoft.Extensions.Logging;
-    using Sentry.Extensions.Logging;
-    using Sentry;
+    using Microsoft.Extensions.Logging.Console;
+    using Microsoft.Extensions.Logging.Abstractions;
+    using Sentry.Protocol;
 
     public class Program
     {
-        private static Timer _timer;
-
-
+        private Timer _timer;
         private static ServiceProvider _sp;
         private readonly DbReadService _drs;
-        public Program()
+        private readonly ILogger<Program> _logger;
+        public Program(DbReadService drs, ILogger<Program> logger)
         {
-            _drs = _sp.GetService<DbReadService>();
+            _logger = logger;
+            _drs = drs;
             
             
         }
@@ -48,11 +49,13 @@
 
         public static ServiceProvider GetSP()
         {
-            var sp=
+            var sp =
              new ServiceCollection()
-                .AddLogging(x=>x.AddSentry(z=> {
-                    z.Dsn = "https://6c8eb9aa732e4eefbbf2203893346e9c:31cb8dde16394c0ea0a70937364aa6f9@sentry.io/1361808";
-                }))
+                .AddLogging(x => {
+                    x.AddConsole();
+                    x.AddSentry(z => { z.Dsn = "https://6c8eb9aa732e4eefbbf2203893346e9c:31cb8dde16394c0ea0a70937364aa6f9@sentry.io/1361808";z.DiagnosticsLevel = SentryLevel.Info; }
+                );
+                })
                 .AddSingleton<Program>()
                 .AddSingleton<DbReadService>()
                 .AddDbContext<CurrencyDbContext>(x => x.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Currencies;Trusted_Connection=True;"))
@@ -81,7 +84,7 @@
             }
             catch (Exception e)
             {
-                new SentryEvent(e);
+                _logger.LogError(e,e.Message);
             }
 
 
