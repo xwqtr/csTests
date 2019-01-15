@@ -17,24 +17,24 @@
         private readonly DbWriteService _dbWrite;
         private readonly ILogger _logger;
         private Timer _timer;
-        private object _state = new object();
+        private AutoResetEvent _autoEvent;
         public CurrencyRefreshHostService(IServiceProvider sp, ILogger<CurrencyRefreshHostService> logger)
         {
             
             _currencyWebServices = sp.GetServices<ICurrencyWebService>();
             _dbWrite = sp.GetService<DbWriteService>();
             _logger = logger;
-            
+            _autoEvent = new AutoResetEvent(true);
         }
 
-        public void DoWork(object state)
+        public async void DoWork(object state)
         {
+            ((AutoResetEvent)state).WaitOne();
             _logger.LogInformation($"Thread:{Thread.CurrentThread.ManagedThreadId} started DoWork");
-            lock(state)
-            {
-                _logger.LogInformation("Timed Background Service is working.");
-                RefreshDbData("ETH", "BTC");
-            }
+            _logger.LogInformation("Timed Background Service is working.");
+            await RefreshDbData("ETH", "BTC");
+            ((AutoResetEvent)state).Set();
+            
             
             
         }
@@ -42,7 +42,7 @@
         public Task StartAsync(CancellationToken cancellationToken)
         {
             _logger.LogInformation("Timed Background Service is starting.");
-            _timer = new Timer(DoWork, _state, TimeSpan.Zero, TimeSpan.FromSeconds(1));
+            _timer = new Timer(DoWork, _autoEvent, TimeSpan.Zero, TimeSpan.FromMilliseconds(200));
             return Task.CompletedTask;
 
         }
@@ -55,7 +55,7 @@
 
         }
 
-        private async void RefreshDbData(string currency1, string currencyToCompare)
+        private async Task RefreshDbData(string currency1, string currencyToCompare)
         {
             var data = (await Task.WhenAll(_currencyWebServices.Select(x =>x.GetHistoricalTrades<IHistoricalTrade>(currency1, currencyToCompare)))).SelectMany(x=>x);
             _dbWrite.WriteHistoricalTrades(data);
