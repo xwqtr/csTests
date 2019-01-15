@@ -1,0 +1,12 @@
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\bin\Debug\netcoreapp2.2\CommonApiAccessProvider.deps.json
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\bin\Debug\netcoreapp2.2\CommonApiAccessProvider.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\bin\Debug\netcoreapp2.2\CommonApiAccessProvider.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\bin\Debug\netcoreapp2.2\CurrencyService.Common.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\bin\Debug\netcoreapp2.2\CurrencyService.Common.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\obj\Debug\netcoreapp2.2\CommonApiAccessProvider.csprojAssemblyReference.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\obj\Debug\netcoreapp2.2\CommonApiAccessProvider.csproj.CoreCompileInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\obj\Debug\netcoreapp2.2\CommonApiAccessProvider.AssemblyInfoInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\obj\Debug\netcoreapp2.2\CommonApiAccessProvider.AssemblyInfo.cs
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\obj\Debug\netcoreapp2.2\CommonApiAccessProvider.csproj.CopyComplete
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\obj\Debug\netcoreapp2.2\CommonApiAccessProvider.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\BaseApiAccessProvider\obj\Debug\netcoreapp2.2\CommonApiAccessProvider.pdb

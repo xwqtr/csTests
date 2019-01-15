@@ -42,7 +42,7 @@
         public Task StartAsync(CancellationToken cancellationToken)
         {
             _logger.LogInformation("Timed Background Service is starting.");
-            _timer = new Timer(DoWork, _state, TimeSpan.Zero, TimeSpan.FromSeconds(15));
+            _timer = new Timer(DoWork, _state, TimeSpan.Zero, TimeSpan.FromSeconds(1));
             return Task.CompletedTask;
 
         }

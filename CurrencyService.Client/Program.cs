@@ -53,7 +53,9 @@
              new ServiceCollection()
                 .AddLogging(x => {
                     x.AddConsole();
-                    x.AddSentry(z => { z.Dsn = "https://6c8eb9aa732e4eefbbf2203893346e9c:31cb8dde16394c0ea0a70937364aa6f9@sentry.io/1361808";z.DiagnosticsLevel = SentryLevel.Info; }
+                    x.AddSentry(z => { z.Dsn = "https://6c8eb9aa732e4eefbbf2203893346e9c:31cb8dde16394c0ea0a70937364aa6f9@sentry.io/1361808";
+                        z.DiagnosticsLevel = SentryLevel.Info;
+                    }
                 );
                 })
                 .AddSingleton<Program>()

@@ -24,7 +24,6 @@
 
         public async Task<IEnumerable<T>> GetHistoricalTrades<T>(string currencyName, string currencyToConvert) where T : IHistoricalTrade
         {
-            IEnumerable<IHistoricalTrade> result;
             try
             {
                 var data = await _aap.GetData<IEnumerable<BinanceModel.HistoricalTrade>>($"{_apiAccessParameters.baseAddress}historicalTrades?symbol={currencyName}{currencyToConvert}", _apiAccessParameters.headers);

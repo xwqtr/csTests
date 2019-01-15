@@ -30,5 +30,7 @@
            return _currencyDbContext.HistoricalTrades.Where(expression);
         }
 
+
+
     }
 }

@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyService.Poloniex", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyService.BackgroundService", "CurrencyService.BackgroundService\CurrencyService.BackgroundService.csproj", "{A218DDCD-4B91-4D03-8328-AC8EB41B9722}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyService.WebApi", "CurrencyService.WebApi\CurrencyService.WebApi.csproj", "{9F71A152-9E08-4C50-86B5-252E52E31B12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,14 @@ Global
 		{A218DDCD-4B91-4D03-8328-AC8EB41B9722}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A218DDCD-4B91-4D03-8328-AC8EB41B9722}.Release|x64.ActiveCfg = Release|Any CPU
 		{A218DDCD-4B91-4D03-8328-AC8EB41B9722}.Release|x64.Build.0 = Release|Any CPU
+		{9F71A152-9E08-4C50-86B5-252E52E31B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F71A152-9E08-4C50-86B5-252E52E31B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F71A152-9E08-4C50-86B5-252E52E31B12}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9F71A152-9E08-4C50-86B5-252E52E31B12}.Debug|x64.Build.0 = Debug|Any CPU
+		{9F71A152-9E08-4C50-86B5-252E52E31B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F71A152-9E08-4C50-86B5-252E52E31B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F71A152-9E08-4C50-86B5-252E52E31B12}.Release|x64.ActiveCfg = Release|Any CPU
+		{9F71A152-9E08-4C50-86B5-252E52E31B12}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

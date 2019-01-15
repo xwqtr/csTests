@@ -20,3 +20,5 @@ C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Client\bin\Debug\netcor
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Client\obj\Debug\netcoreapp2.1\CurrencyService.Client.csproj.CopyComplete
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Client\obj\Debug\netcoreapp2.1\CurrencyService.Client.dll
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Client\obj\Debug\netcoreapp2.1\CurrencyService.Client.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Client\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Client\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.xml
