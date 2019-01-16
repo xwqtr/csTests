@@ -1,0 +1,9 @@
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\bin\Debug\netcoreapp2.2\ServiceHelper.deps.json
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\bin\Debug\netcoreapp2.2\ServiceHelper.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\bin\Debug\netcoreapp2.2\ServiceHelper.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServiceHelper.csprojAssemblyReference.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServiceHelper.csproj.CoreCompileInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServiceHelper.AssemblyInfoInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServiceHelper.AssemblyInfo.cs
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServiceHelper.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServiceHelper.pdb

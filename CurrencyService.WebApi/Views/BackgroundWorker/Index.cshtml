@@ -1,0 +1,16 @@
+﻿@using CurrencyService.WebApi.Models.BackgroundWorker
+@model BackgroundWorkerConfigurationViewModel
+@{
+    ViewData["Title"] = "Background Worker Configuration";
+}
+
+<form name="BackgroundWorkerConfiguration" method="post" action="@Url.Action("SaveConfig","BackgroundWorker")">
+    <p>
+        <b>Set bgworker data receival interval:</b><br>
+        <input type="number" name="SecondsInterval" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Очистить">
+    </p>
+</form>

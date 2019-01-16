@@ -1,0 +1,9 @@
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\bin\Debug\netcoreapp2.2\ServicePathFinder.deps.json
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\bin\Debug\netcoreapp2.2\ServicePathFinder.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\bin\Debug\netcoreapp2.2\ServicePathFinder.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServicePathFinder.csprojAssemblyReference.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServicePathFinder.csproj.CoreCompileInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServicePathFinder.AssemblyInfoInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServicePathFinder.AssemblyInfo.cs
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServicePathFinder.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\ServicePathFinder\obj\Debug\netcoreapp2.2\ServicePathFinder.pdb

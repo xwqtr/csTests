@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.2": {
       "CurrencyService.WebApi/1.0.0": {
         "dependencies": {
+          "CurrencyService.BackgroundService.Common": "1.0.0",
           "CurrencyService.DAL": "1.0.0",
           "CurrencyService.DB": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
@@ -34,7 +35,8 @@
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.3.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.0",
-          "Newtonsoft.Json": "12.0.1"
+          "Newtonsoft.Json": "12.0.1",
+          "ServiceHelper": "1.0.0"
         },
         "runtime": {
           "CurrencyService.WebApi.dll": {}
@@ -643,6 +645,14 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "CurrencyService.BackgroundService.Common/1.0.0": {
+        "runtime": {
+          "CurrencyService.BackgroundService.Common.dll": {}
+        },
+        "compile": {
+          "CurrencyService.BackgroundService.Common.dll": {}
+        }
+      },
       "CurrencyService.Common/1.0.0": {
         "runtime": {
           "CurrencyService.Common.dll": {}
@@ -674,6 +684,14 @@
         },
         "compile": {
           "CurrencyService.DB.dll": {}
+        }
+      },
+      "ServiceHelper/1.0.0": {
+        "runtime": {
+          "ServiceHelper.dll": {}
+        },
+        "compile": {
+          "ServiceHelper.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3849,6 +3867,11 @@
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
+    "CurrencyService.BackgroundService.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "CurrencyService.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -3860,6 +3883,11 @@
       "sha512": ""
     },
     "CurrencyService.DB/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ServiceHelper/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

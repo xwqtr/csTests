@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
@@ -25,6 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BaseApiAccessProvider\CommonApiAccessProvider.csproj" />
+    <ProjectReference Include="..\CurrencyService.BackgroundService.Common\CurrencyService.BackgroundService.Common.csproj" />
     <ProjectReference Include="..\CurrencyService.Common\CurrencyService.Common.csproj" />
     <ProjectReference Include="..\CurrencyService.DAL\CurrencyService.DAL.csproj" />
     <ProjectReference Include="..\CurrencyService.DB\CurrencyService.DB.csproj" />
@@ -32,7 +35,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="deleteService.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="restartService.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="installService.bat">

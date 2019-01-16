@@ -1922,6 +1922,16 @@
           "bin/placeholder/CommonApiAccessProvider.dll": {}
         }
       },
+      "CurrencyService.BackgroundService.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/CurrencyService.BackgroundService.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CurrencyService.BackgroundService.Common.dll": {}
+        }
+      },
       "CurrencyService.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -4050,6 +4060,16 @@
         },
         "runtime": {
           "bin/placeholder/CommonApiAccessProvider.dll": {}
+        }
+      },
+      "CurrencyService.BackgroundService.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/CurrencyService.BackgroundService.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CurrencyService.BackgroundService.Common.dll": {}
         }
       },
       "CurrencyService.Common/1.0.0": {
@@ -8199,6 +8219,11 @@
       "path": "../BaseApiAccessProvider/CommonApiAccessProvider.csproj",
       "msbuildProject": "../BaseApiAccessProvider/CommonApiAccessProvider.csproj"
     },
+    "CurrencyService.BackgroundService.Common/1.0.0": {
+      "type": "project",
+      "path": "../CurrencyService.BackgroundService.Common/CurrencyService.BackgroundService.Common.csproj",
+      "msbuildProject": "../CurrencyService.BackgroundService.Common/CurrencyService.BackgroundService.Common.csproj"
+    },
     "CurrencyService.Common/1.0.0": {
       "type": "project",
       "path": "../CurrencyService.Common/CurrencyService.Common.csproj",
@@ -8223,11 +8248,14 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "CommonApiAccessProvider >= 1.0.0",
+      "CurrencyService.BackgroundService.Common >= 1.0.0",
       "CurrencyService.Common >= 1.0.0",
       "CurrencyService.DAL >= 1.0.0",
       "CurrencyService.DB >= 1.0.0",
       "GenericLibraryParser >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.1",
+      "Microsoft.Extensions.Configuration >= 2.2.0",
+      "Microsoft.Extensions.Configuration.Abstractions >= 2.2.0",
       "Microsoft.Extensions.Configuration.CommandLine >= 2.2.0",
       "Microsoft.Extensions.Configuration.EnvironmentVariables >= 2.2.0",
       "Microsoft.Extensions.Configuration.Json >= 2.2.0",
@@ -8281,6 +8309,9 @@
             "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\BaseApiAccessProvider\\CommonApiAccessProvider.csproj": {
               "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\BaseApiAccessProvider\\CommonApiAccessProvider.csproj"
             },
+            "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.BackgroundService.Common\\CurrencyService.BackgroundService.Common.csproj": {
+              "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.BackgroundService.Common\\CurrencyService.BackgroundService.Common.csproj"
+            },
             "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.Common\\CurrencyService.Common.csproj": {
               "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.Common\\CurrencyService.Common.csproj"
             },
@@ -8308,6 +8339,14 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[2.2.1, )"
+          },
+          "Microsoft.Extensions.Configuration": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.Extensions.Configuration.Abstractions": {
+            "target": "Package",
+            "version": "[2.2.0, )"
           },
           "Microsoft.Extensions.Configuration.CommandLine": {
             "target": "Package",

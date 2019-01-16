@@ -12,7 +12,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.Extensions.Configuration;
 namespace CurrencyService.BackgroundService
 {
 
@@ -31,6 +31,7 @@ namespace CurrencyService.BackgroundService
                .AddHostedService<CurrencyRefreshHostService>()
                .AddLogging();
             })
+            .ConfigureAppConfiguration(x=>x.AddJsonFile("config.json",false,reloadOnChange:true))
             .ConfigureLogging(x =>
             {
                 x.AddConsole();

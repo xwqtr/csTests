@@ -23,3 +23,7 @@ C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\obj\R
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\obj\Release\netcoreapp2.2\win10-x64\CurrencyService.BackgroundService.pdb
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Release\netcoreapp2.2\win10-x64\deleteService.bat
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Release\netcoreapp2.2\win10-x64\installService.bat
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Release\netcoreapp2.2\win10-x64\config.json
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Release\netcoreapp2.2\win10-x64\CurrencyService.BackgroundService.Common.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Release\netcoreapp2.2\win10-x64\CurrencyService.BackgroundService.Common.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService\bin\Release\netcoreapp2.2\win10-x64\restartService.bat

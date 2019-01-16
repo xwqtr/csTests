@@ -9,11 +9,14 @@
       "CurrencyService.BackgroundService/1.0.0": {
         "dependencies": {
           "CommonApiAccessProvider": "1.0.0",
+          "CurrencyService.BackgroundService.Common": "1.0.0",
           "CurrencyService.Common": "1.0.0",
           "CurrencyService.DAL": "1.0.0",
           "CurrencyService.DB": "1.0.0",
           "GenericLibraryParser": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.1",
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0",
           "Microsoft.Extensions.Configuration.CommandLine": "2.2.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.2.0",
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
@@ -1412,6 +1415,11 @@
           "CommonApiAccessProvider.dll": {}
         }
       },
+      "CurrencyService.BackgroundService.Common/1.0.0": {
+        "runtime": {
+          "CurrencyService.BackgroundService.Common.dll": {}
+        }
+      },
       "CurrencyService.Common/1.0.0": {
         "runtime": {
           "CurrencyService.Common.dll": {}
@@ -2314,6 +2322,11 @@
       "hashPath": "system.threading.tasks.extensions.4.5.1.nupkg.sha512"
     },
     "CommonApiAccessProvider/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CurrencyService.BackgroundService.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

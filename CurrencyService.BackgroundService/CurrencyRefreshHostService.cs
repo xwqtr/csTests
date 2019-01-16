@@ -11,6 +11,9 @@
     using System.ServiceProcess;
     using System.Threading;
     using System.Threading.Tasks;
+    using Microsoft.Extensions.Configuration;
+    using CurrencyService.BackgroundService.Common;
+
     public class CurrencyRefreshHostService : IHostedService, IDisposable
     {
         private readonly IEnumerable<ICurrencyWebService> _currencyWebServices;
@@ -18,9 +21,10 @@
         private readonly ILogger _logger;
         private Timer _timer;
         private AutoResetEvent _autoEvent;
-        public CurrencyRefreshHostService(IServiceProvider sp, ILogger<CurrencyRefreshHostService> logger)
+        private readonly BackgroundWorkerConfiguration _configuration = new BackgroundWorkerConfiguration();
+        public CurrencyRefreshHostService(IServiceProvider sp, ILogger<CurrencyRefreshHostService> logger, IConfiguration configuration)
         {
-            
+            configuration.Bind(_configuration);
             _currencyWebServices = sp.GetServices<ICurrencyWebService>();
             _dbWrite = sp.GetService<DbWriteService>();
             _logger = logger;
@@ -42,7 +46,7 @@
         public Task StartAsync(CancellationToken cancellationToken)
         {
             _logger.LogInformation("Timed Background Service is starting.");
-            _timer = new Timer(DoWork, _autoEvent, TimeSpan.Zero, TimeSpan.FromMilliseconds(200));
+            _timer = new Timer(DoWork, _autoEvent, TimeSpan.Zero, TimeSpan.FromSeconds(_configuration.SecondsInterval));
             return Task.CompletedTask;
 
         }

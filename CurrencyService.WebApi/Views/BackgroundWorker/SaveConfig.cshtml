@@ -1,0 +1,21 @@
+﻿@using CurrencyService.WebApi.Models.BackgroundWorker
+
+@model SaveConfigResult
+
+
+@{
+    ViewData["Title"] = "SaveConfig";
+}
+
+<h1>
+    Save config result:
+    @if (Model.Successfull)
+    {
+        <text>Successfull</text> 
+    }
+    else
+    {
+        <text>NOOOOOOOOO : @Model.Message</text>
+    }
+</h1>
+

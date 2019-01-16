@@ -34,3 +34,9 @@ C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\obj\Debug\netcor
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\obj\Debug\netcoreapp2.2\CurrencyService.WebApi.csproj.CopyComplete
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\obj\Debug\netcoreapp2.2\CurrencyService.WebApi.dll
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\obj\Debug\netcoreapp2.2\CurrencyService.WebApi.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\obj\Debug\netcoreapp2.2\Razor\Views\BackgroundWorker\Index.g.cshtml.cs
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\obj\Debug\netcoreapp2.2\Razor\Views\BackgroundWorker\SaveConfig.g.cshtml.cs
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.Common.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.Common.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcoreapp2.2\ServiceHelper.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcoreapp2.2\ServiceHelper.pdb
