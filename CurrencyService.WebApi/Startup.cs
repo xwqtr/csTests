@@ -34,6 +34,7 @@ namespace CurrencyService.WebApi
                 .AddEntityFrameworkStores<CurrencyDbContext>()
                 .AddDefaultTokenProviders();
             services
+                .AddCors()
                 .AddScoped<DbReadService>()
                 .AddDbContext<CurrencyDbContext>(x => x.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Currencies;Trusted_Connection=True;"))
                 .AddLogging(x => x.AddConsole().AddDebug())
@@ -76,6 +77,7 @@ namespace CurrencyService.WebApi
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseCors();
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();

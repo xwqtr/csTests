@@ -6,3 +6,4 @@ C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Commo
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\obj\Debug\netcoreapp2.2\CurrencyService.BackgroundService.Common.AssemblyInfo.cs
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\obj\Debug\netcoreapp2.2\CurrencyService.BackgroundService.Common.dll
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\obj\Debug\netcoreapp2.2\CurrencyService.BackgroundService.Common.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\obj\Debug\netcoreapp2.2\CurrencyService.BackgroundService.Common.csprojAssemblyReference.cache
