@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Data } from './Data';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ChartData } from './Data';
 import { Chart } from 'chart.js';
 @Component({
   selector: 'app-root',
@@ -9,18 +9,21 @@ import { Chart } from 'chart.js';
 })
 export class AppComponent implements OnInit {
   title = 'app';
-  data: Data[];
-  url = 'http://localhost:3000/results';
+  data: ChartData[];
+  // url = 'http://localhost:3000/results';
+  url = 'https://localhost:44380/Chart/GetChartDataByDay?currencyName=BTC&fromDay=0';
   month = [];
-  price = [];
+  cost = [];
   chart = [];
   constructor(private httpClient: HttpClient) {}
 
   ngOnInit() {
-    this.httpClient.get(this.url).subscribe((res: Data[]) => {
+    // const httpH = new HttpHeaders();
+    // httpH.append('Access-Control-Allow-Origin', '*');
+    this.httpClient.get(this.url).subscribe((res: ChartData[]) => {
       res.forEach(y => {
         this.month.push(y.month);
-        this.price.push(y.price);
+        this.cost.push(y.cost);
       });
       this.chart = new Chart('canvas', {
         type: 'line',
@@ -28,7 +31,7 @@ export class AppComponent implements OnInit {
           labels: this.month,
           datasets: [
             {
-              data: this.price,
+              data: this.cost,
               borderColor: '#3cba9f',
               fill: false
             }

@@ -1,4 +1,5 @@
-export interface Data {
+export interface ChartData {
     month: string;
-    price: Number;
+    cost: Number;
+    name: string;
   }
