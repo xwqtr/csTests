@@ -54,7 +54,6 @@ namespace CurrencyService.WebApi
                     options.LogoutPath = "/Account/LogOut";
                     
                 })
-               
                 .AddGoogle(options =>
                 {
                     //options.CallbackPath = "/api/currencies";
@@ -77,7 +76,8 @@ namespace CurrencyService.WebApi
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseCors(x=>x.AllowAnyOrigin());
+            app.UseCookiePolicy();
+            app.UseCors(x=>x.WithOrigins("http://localhost:4200").AllowCredentials());
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();

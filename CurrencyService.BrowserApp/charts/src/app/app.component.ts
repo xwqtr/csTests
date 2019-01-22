@@ -1,7 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ChartData } from './Data';
-import { Chart } from 'chart.js';
+import {
+  Component,
+  OnInit,
+  AfterViewInit
+} from '@angular/core';
+import {
+  HttpClient,
+  HttpHeaders,
+  HttpErrorResponse
+} from '@angular/common/http';
+import {
+  ChartData
+} from './Data';
+import {
+  Chart
+} from 'chart.js';
+import {
+  Alert
+} from 'selenium-webdriver';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,40 +32,53 @@ export class AppComponent implements OnInit {
   chart = [];
   constructor(private httpClient: HttpClient) {}
 
-  ngOnInit() {
-    // const httpH = new HttpHeaders();
-    // httpH.append('Access-Control-Allow-Origin', '*');
-    this.httpClient.get(this.url).subscribe((res: ChartData[]) => {
-      res.forEach(y => {
-        this.month.push(y.month);
-        this.cost.push(y.cost);
-      });
-      this.chart = new Chart('canvas', {
-        type: 'line',
-        data: {
-          labels: this.month,
-          datasets: [
-            {
-              data: this.cost,
-              borderColor: '#3cba9f',
-              fill: false
+  ngOnInit() {}
+  getData() {
+    this.httpClient.get(this.url, {
+        withCredentials: true
+      })
+      .subscribe((res: ChartData[]) => this.buildData(res), (error: HttpErrorResponse) => {
+        if (!error.ok) {
+          const win =  window.open(error.url);
+          const timer = setInterval(() => {
+            if (win.closed) {
+                clearInterval(timer);
+                location.reload();
             }
-          ]
-        },
-        options: {
-          legend: {
-            display: false
-          },
-          scales: {
-            xAxes: [{
-              display: true
-            }],
-            yAxes: [{
-              display: true
-            }],
-          }
-        }
+        }, 500);
+      }
+        console.log(error);
       });
+  }
+
+  buildData(res: ChartData[]) {
+    res.forEach(y => {
+      this.month.push(y.month);
+      this.cost.push(y.cost);
+    });
+    this.chart = new Chart('canvas', {
+      type: 'line',
+      data: {
+        labels: this.month,
+        datasets: [{
+          data: this.cost,
+          borderColor: '#3cba9f',
+          fill: false
+        }]
+      },
+      options: {
+        legend: {
+          display: false
+        },
+        scales: {
+          xAxes: [{
+            display: true
+          }],
+          yAxes: [{
+            display: true
+          }],
+        }
+      }
     });
   }
 }

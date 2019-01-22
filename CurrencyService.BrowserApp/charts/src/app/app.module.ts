@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,4 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [AppComponent]
 })
 export class AppModule {
+
+  private readonly _appComponent: AppComponent;
+  constructor(private httpClient: HttpClient) {
+    this._appComponent = new AppComponent(httpClient);
+    this._appComponent.getData();
+  }
 }

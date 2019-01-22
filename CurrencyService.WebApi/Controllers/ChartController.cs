@@ -9,7 +9,7 @@
     using CurrencyService.WebApi.Models.Chart;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
-     //[Authorize]
+    [Authorize]
     [Route("[controller]/[Action]")]
     public class ChartController : Controller
     {
