@@ -47,6 +47,7 @@ namespace CurrencyService.WebApi
                 
                 options.User.RequireUniqueEmail = true;
             });
+            services.AddResponseCompression();
             services
                 .AddAuthentication()
                 .AddCookie(options => {
@@ -76,6 +77,7 @@ namespace CurrencyService.WebApi
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseResponseCompression();
             app.UseCookiePolicy();
             app.UseCors(x=>x.WithOrigins("http://localhost:4200").AllowCredentials());
             app.UseAuthentication();
