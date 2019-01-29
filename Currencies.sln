@@ -27,9 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyService.BackgroundS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyService.WebApi", "CurrencyService.WebApi\CurrencyService.WebApi.csproj", "{9F71A152-9E08-4C50-86B5-252E52E31B12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyService.BackgroundService.Common", "CurrencyService.BackgroundService.Common\CurrencyService.BackgroundService.Common.csproj", "{B6AB3E4C-304A-4C5E-9BEF-EBFA00600478}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyService.BackgroundService.Common", "CurrencyService.BackgroundService.Common\CurrencyService.BackgroundService.Common.csproj", "{B6AB3E4C-304A-4C5E-9BEF-EBFA00600478}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHelper", "ServicePathFinder\ServiceHelper.csproj", "{2078736B-B004-4DBF-A735-4F28742ED0CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceHelper", "ServicePathFinder\ServiceHelper.csproj", "{2078736B-B004-4DBF-A735-4F28742ED0CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

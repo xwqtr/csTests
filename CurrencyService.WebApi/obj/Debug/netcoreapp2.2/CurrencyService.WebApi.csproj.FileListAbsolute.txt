@@ -40,3 +40,7 @@ C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcor
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcoreapp2.2\CurrencyService.BackgroundService.Common.pdb
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcoreapp2.2\ServiceHelper.dll
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcoreapp2.2\ServiceHelper.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcoreapp2.2\CommonApiAccessProvider.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcoreapp2.2\CurrencyService.Binance.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcoreapp2.2\CurrencyService.Binance.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.WebApi\bin\Debug\netcoreapp2.2\CommonApiAccessProvider.pdb

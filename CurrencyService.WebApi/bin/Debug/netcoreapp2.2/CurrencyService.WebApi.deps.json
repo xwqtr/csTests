@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "fc247e209e161e14e27b1bef9311a765c44cf1ac"
+    "signature": "3e8ceb78ef757a6c9b81f5b70b35a1f010cd7b04"
   },
   "compilationOptions": {
     "defines": [
@@ -25,11 +25,13 @@
       "CurrencyService.WebApi/1.0.0": {
         "dependencies": {
           "CurrencyService.BackgroundService.Common": "1.0.0",
+          "CurrencyService.Binance": "1.0.0",
           "CurrencyService.DAL": "1.0.0",
           "CurrencyService.DB": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Authentication.Google": "2.2.0",
+          "Microsoft.AspNetCore.OData": "7.1.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.1",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.3.0",
@@ -43,6 +45,22 @@
         },
         "compile": {
           "CurrencyService.WebApi.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.OData/7.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection": "2.2.0",
+          "Microsoft.OData.Core": "7.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.OData.dll": {
+            "assemblyVersion": "7.1.0.21120",
+            "fileVersion": "7.1.0.21120"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.OData.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -310,6 +328,43 @@
       },
       "Microsoft.NETCore.Platforms/2.2.0": {},
       "Microsoft.NETCore.Targets/2.0.0": {},
+      "Microsoft.OData.Core/7.5.0": {
+        "dependencies": {
+          "Microsoft.OData.Edm": "7.5.0",
+          "Microsoft.Spatial": "7.5.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.OData.Core.dll": {
+            "assemblyVersion": "7.5.0.20627",
+            "fileVersion": "7.5.0.20627"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.1/Microsoft.OData.Core.dll": {}
+        }
+      },
+      "Microsoft.OData.Edm/7.5.0": {
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.OData.Edm.dll": {
+            "assemblyVersion": "7.5.0.20627",
+            "fileVersion": "7.5.0.20627"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.1/Microsoft.OData.Edm.dll": {}
+        }
+      },
+      "Microsoft.Spatial/7.5.0": {
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.Spatial.dll": {
+            "assemblyVersion": "7.5.0.20627",
+            "fileVersion": "7.5.0.20627"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.1/Microsoft.Spatial.dll": {}
+        }
+      },
       "Microsoft.VisualStudio.Web.CodeGeneration/2.2.1": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "2.2.0",
@@ -645,12 +700,36 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "CommonApiAccessProvider/1.0.0": {
+        "dependencies": {
+          "CurrencyService.Common": "1.0.0",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "CommonApiAccessProvider.dll": {}
+        },
+        "compile": {
+          "CommonApiAccessProvider.dll": {}
+        }
+      },
       "CurrencyService.BackgroundService.Common/1.0.0": {
         "runtime": {
           "CurrencyService.BackgroundService.Common.dll": {}
         },
         "compile": {
           "CurrencyService.BackgroundService.Common.dll": {}
+        }
+      },
+      "CurrencyService.Binance/1.0.0": {
+        "dependencies": {
+          "CommonApiAccessProvider": "1.0.0",
+          "CurrencyService.Common": "1.0.0"
+        },
+        "runtime": {
+          "CurrencyService.Binance.dll": {}
+        },
+        "compile": {
+          "CurrencyService.Binance.dll": {}
         }
       },
       "CurrencyService.Common/1.0.0": {
@@ -3622,6 +3701,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.AspNetCore.OData/7.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-klDVC2zGbHGXJHxGnWs7VYbeDNgTD2HJIuKpziSBg1K7itXep4Mh+g6JeVZckh5OAqJf+N2N2BXvsLlxN4p3XA==",
+      "path": "microsoft.aspnetcore.odata/7.1.0",
+      "hashPath": "microsoft.aspnetcore.odata.7.1.0.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -3712,6 +3798,27 @@
       "sha512": "sha512-odP/tJj1z6GylFpNo7pMtbd/xQgTC3Ex2If63dRTL38bBNMwsBnJ+RceUIyHdRBC0oik/3NehYT+oECwBhIM3Q==",
       "path": "microsoft.netcore.targets/2.0.0",
       "hashPath": "microsoft.netcore.targets.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.OData.Core/7.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ghfBHBOUbcz4AcPgxo8w2/qtI+GrosRwQfT9LTagAxyARLDk6tbsFbYTJ2IJF2TJ24BlQfj6wsi6JHprMdO7VQ==",
+      "path": "microsoft.odata.core/7.5.0",
+      "hashPath": "microsoft.odata.core.7.5.0.nupkg.sha512"
+    },
+    "Microsoft.OData.Edm/7.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jz/mqJdA80t628LXJYumsVO8sY1y8fnfCUU1+dN5UJRB1ICEc+z6ZtpGPG8KLUvREipGy/Va7EKslyJCAYe6QA==",
+      "path": "microsoft.odata.edm/7.5.0",
+      "hashPath": "microsoft.odata.edm.7.5.0.nupkg.sha512"
+    },
+    "Microsoft.Spatial/7.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zga9GToq8/m65bI1xyRDxPgt3xA3O0lTMwBo/seCknpKSU16UJJ2k8AQ1xP66yUYonoBPX4GlwQow8avLbocMw==",
+      "path": "microsoft.spatial/7.5.0",
+      "hashPath": "microsoft.spatial.7.5.0.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.2.1": {
       "type": "package",
@@ -3867,7 +3974,17 @@
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
+    "CommonApiAccessProvider/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "CurrencyService.BackgroundService.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CurrencyService.Binance/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

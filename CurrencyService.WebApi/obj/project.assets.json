@@ -1126,6 +1126,20 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.NodeServices.dll": {}
         }
       },
+      "Microsoft.AspNetCore.OData/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "[2.0.0, 3.0.0)",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.OData.Core": "[7.5.0, 8.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.OData.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.OData.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Owin/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2715,6 +2729,37 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.OData.Core/7.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OData.Edm": "[7.5.0]",
+          "Microsoft.Spatial": "[7.5.0]"
+        },
+        "compile": {
+          "lib/netstandard1.1/Microsoft.OData.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.OData.Core.dll": {}
+        }
+      },
+      "Microsoft.OData.Edm/7.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.1/Microsoft.OData.Edm.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.OData.Edm.dll": {}
+        }
+      },
+      "Microsoft.Spatial/7.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.1/Microsoft.Spatial.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.Spatial.dll": {}
         }
       },
       "Microsoft.VisualStudio.Web.CodeGeneration/2.2.1": {
@@ -4721,6 +4766,20 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "CommonApiAccessProvider/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "CurrencyService.Common": "1.0.0",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "compile": {
+          "bin/placeholder/CommonApiAccessProvider.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonApiAccessProvider.dll": {}
+        }
+      },
       "CurrencyService.BackgroundService.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -4729,6 +4788,20 @@
         },
         "runtime": {
           "bin/placeholder/CurrencyService.BackgroundService.Common.dll": {}
+        }
+      },
+      "CurrencyService.Binance/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "CommonApiAccessProvider": "1.0.0",
+          "CurrencyService.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CurrencyService.Binance.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CurrencyService.Binance.dll": {}
         }
       },
       "CurrencyService.Common/1.0.0": {
@@ -5670,6 +5743,19 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.NodeServices.xml",
         "microsoft.aspnetcore.nodeservices.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.nodeservices.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.OData/7.1.0": {
+      "sha512": "klDVC2zGbHGXJHxGnWs7VYbeDNgTD2HJIuKpziSBg1K7itXep4Mh+g6JeVZckh5OAqJf+N2N2BXvsLlxN4p3XA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.odata/7.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.OData.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.OData.xml",
+        "microsoft.aspnetcore.odata.7.1.0.nupkg.sha512",
+        "microsoft.aspnetcore.odata.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Owin/2.2.0": {
@@ -7540,6 +7626,51 @@
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.OData.Core/7.5.0": {
+      "sha512": "ghfBHBOUbcz4AcPgxo8w2/qtI+GrosRwQfT9LTagAxyARLDk6tbsFbYTJ2IJF2TJ24BlQfj6wsi6JHprMdO7VQ==",
+      "type": "package",
+      "path": "microsoft.odata.core/7.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Microsoft.OData.Core.dll",
+        "lib/netstandard1.1/Microsoft.OData.Core.xml",
+        "lib/portable-net45+win8+wpa81/Microsoft.OData.Core.dll",
+        "lib/portable-net45+win8+wpa81/Microsoft.OData.Core.xml",
+        "microsoft.odata.core.7.5.0.nupkg.sha512",
+        "microsoft.odata.core.nuspec"
+      ]
+    },
+    "Microsoft.OData.Edm/7.5.0": {
+      "sha512": "jz/mqJdA80t628LXJYumsVO8sY1y8fnfCUU1+dN5UJRB1ICEc+z6ZtpGPG8KLUvREipGy/Va7EKslyJCAYe6QA==",
+      "type": "package",
+      "path": "microsoft.odata.edm/7.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Microsoft.OData.Edm.dll",
+        "lib/netstandard1.1/Microsoft.OData.Edm.xml",
+        "lib/portable-net45+win8+wpa81/Microsoft.OData.Edm.dll",
+        "lib/portable-net45+win8+wpa81/Microsoft.OData.Edm.xml",
+        "microsoft.odata.edm.7.5.0.nupkg.sha512",
+        "microsoft.odata.edm.nuspec"
+      ]
+    },
+    "Microsoft.Spatial/7.5.0": {
+      "sha512": "zga9GToq8/m65bI1xyRDxPgt3xA3O0lTMwBo/seCknpKSU16UJJ2k8AQ1xP66yUYonoBPX4GlwQow8avLbocMw==",
+      "type": "package",
+      "path": "microsoft.spatial/7.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Microsoft.Spatial.dll",
+        "lib/netstandard1.1/Microsoft.Spatial.xml",
+        "lib/portable-net45+win8+wpa81/Microsoft.Spatial.dll",
+        "lib/portable-net45+win8+wpa81/Microsoft.Spatial.xml",
+        "microsoft.spatial.7.5.0.nupkg.sha512",
+        "microsoft.spatial.nuspec"
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.2.1": {
@@ -13013,10 +13144,20 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "CommonApiAccessProvider/1.0.0": {
+      "type": "project",
+      "path": "../BaseApiAccessProvider/CommonApiAccessProvider.csproj",
+      "msbuildProject": "../BaseApiAccessProvider/CommonApiAccessProvider.csproj"
+    },
     "CurrencyService.BackgroundService.Common/1.0.0": {
       "type": "project",
       "path": "../CurrencyService.BackgroundService.Common/CurrencyService.BackgroundService.Common.csproj",
       "msbuildProject": "../CurrencyService.BackgroundService.Common/CurrencyService.BackgroundService.Common.csproj"
+    },
+    "CurrencyService.Binance/1.0.0": {
+      "type": "project",
+      "path": "../CurrencyService.Binance/CurrencyService.Binance.csproj",
+      "msbuildProject": "../CurrencyService.Binance/CurrencyService.Binance.csproj"
     },
     "CurrencyService.Common/1.0.0": {
       "type": "project",
@@ -13042,11 +13183,13 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "CurrencyService.BackgroundService.Common >= 1.0.0",
+      "CurrencyService.Binance >= 1.0.0",
       "CurrencyService.DAL >= 1.0.0",
       "CurrencyService.DB >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Authentication >= 2.2.0",
       "Microsoft.AspNetCore.Authentication.Google >= 2.2.0",
+      "Microsoft.AspNetCore.OData >= 7.1.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.1",
       "Microsoft.IdentityModel.Protocols.OpenIdConnect >= 5.3.0",
@@ -13093,6 +13236,9 @@
             "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.BackgroundService.Common\\CurrencyService.BackgroundService.Common.csproj": {
               "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.BackgroundService.Common\\CurrencyService.BackgroundService.Common.csproj"
             },
+            "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.Binance\\CurrencyService.Binance.csproj": {
+              "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.Binance\\CurrencyService.Binance.csproj"
+            },
             "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.DAL\\CurrencyService.DAL.csproj": {
               "projectPath": "C:\\Users\\v-ilseka\\SelfImprovemet\\csTests\\CurrencyService.DAL\\CurrencyService.DAL.csproj"
             },
@@ -13127,6 +13273,10 @@
           "Microsoft.AspNetCore.Authentication.Google": {
             "target": "Package",
             "version": "[2.2.0, )"
+          },
+          "Microsoft.AspNetCore.OData": {
+            "target": "Package",
+            "version": "[7.1.0, )"
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",
