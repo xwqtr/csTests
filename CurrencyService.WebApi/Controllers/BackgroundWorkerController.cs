@@ -24,6 +24,7 @@ namespace CurrencyService.WebApi.Controllers
         private readonly DbWriteService _dbWriteService; 
         public BackgroundWorkerController(DbWriteService dbWriteService) {
             _backgroundServicePathFolder = Path.GetDirectoryName(Finder.GetServicePath(_bgServiceName));
+            _dbWriteService = dbWriteService;
         }
         public IActionResult Index()
         {
