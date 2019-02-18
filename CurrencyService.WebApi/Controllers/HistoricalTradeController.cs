@@ -24,7 +24,7 @@ namespace CurrencyService.WebApi.Controllers
         }
         [EnableQuery]
         [HttpGet]
-        public IQueryable<IHistoricalTrade> Get()  { 
+        public IQueryable<IHistoricalTrade> Get()  {
         return _service.GetHistoricalTrades().AsQueryable();
         }
         

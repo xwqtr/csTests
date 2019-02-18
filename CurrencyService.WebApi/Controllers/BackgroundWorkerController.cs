@@ -11,6 +11,7 @@ using ServiceHelper;
 using Newtonsoft.Json;
 using CurrencyService.BackgroundService.Common;
 using System.Diagnostics;
+using CurrencyService.DAL;
 
 namespace CurrencyService.WebApi.Controllers
 {
@@ -20,7 +21,8 @@ namespace CurrencyService.WebApi.Controllers
     {
         private readonly string _backgroundServicePathFolder;
         private const string _bgServiceName = "CurrencyService.BackgroundService";
-        public BackgroundWorkerController() {
+        private readonly DbWriteService _dbWriteService; 
+        public BackgroundWorkerController(DbWriteService dbWriteService) {
             _backgroundServicePathFolder = Path.GetDirectoryName(Finder.GetServicePath(_bgServiceName));
         }
         public IActionResult Index()
@@ -32,31 +34,21 @@ namespace CurrencyService.WebApi.Controllers
         public IActionResult SaveConfig(BackgroundWorkerConfigurationViewModel model) {
 
             var result = new SaveConfigResult();
-            var jsonConfigName = Path.Combine(_backgroundServicePathFolder, "config.json");
-            if (FileSysIO.Exists(jsonConfigName))
+
+            try
             {
-                var content = JsonConvert.DeserializeObject<BackgroundWorkerConfiguration>(FileSysIO.ReadAllText(jsonConfigName));
-                content.SecondsInterval = model.SecondsInterval;
-                var newConfigText = JsonConvert.SerializeObject(content);
-                FileSysIO.WriteAllText(jsonConfigName, newConfigText);
-                try
-                {
-                    Manager.RestartService(_backgroundServicePathFolder,_bgServiceName);
-                    result.Successfull = true;
-                }
-                catch(Exception e)
-                {
-                    result.Successfull = false;
-                    result.Message = $"Cannot restartService {e.Message}";
-                }
+                _dbWriteService.AddBgWorkerConfiguration(model);
+                result.Successfull = true;
+            }
+            catch(Exception e)
+            {
+                result.Successfull = false;
+                result.Message = e.Message;
+            }
                    
                 
                 
-            }
-            else {
-                result.Successfull = false;
-                result.Message= $"File {jsonConfigName} not found";
-            }
+            
             return View(result);
         }
 

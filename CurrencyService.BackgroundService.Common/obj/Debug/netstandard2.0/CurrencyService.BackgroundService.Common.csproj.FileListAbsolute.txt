@@ -1,0 +1,8 @@
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\bin\Debug\netstandard2.0\CurrencyService.BackgroundService.Common.deps.json
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\bin\Debug\netstandard2.0\CurrencyService.BackgroundService.Common.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\bin\Debug\netstandard2.0\CurrencyService.BackgroundService.Common.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\obj\Debug\netstandard2.0\CurrencyService.BackgroundService.Common.csproj.CoreCompileInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\obj\Debug\netstandard2.0\CurrencyService.BackgroundService.Common.AssemblyInfoInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\obj\Debug\netstandard2.0\CurrencyService.BackgroundService.Common.AssemblyInfo.cs
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\obj\Debug\netstandard2.0\CurrencyService.BackgroundService.Common.dll
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.BackgroundService.Common\obj\Debug\netstandard2.0\CurrencyService.BackgroundService.Common.pdb

@@ -1924,7 +1924,7 @@
       },
       "CurrencyService.BackgroundService.Common/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
+        "framework": ".NETStandard,Version=v2.0",
         "compile": {
           "bin/placeholder/CurrencyService.BackgroundService.Common.dll": {}
         },
@@ -1959,10 +1959,12 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CurrencyService.BackgroundService.Common": "1.0.0",
           "CurrencyService.Common": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.1"
         },
         "compile": {
           "bin/placeholder/CurrencyService.DB.dll": {}

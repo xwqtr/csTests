@@ -1,0 +1,2 @@
+sc stop CurrencyService.BackgroundService
+sc start CurrencyService.BackgroundService 

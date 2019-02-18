@@ -9,7 +9,6 @@
     using CurrencyService.Common.Interfaces;
     using CurrencyService.DB.Models;
     using Microsoft.Extensions.Logging;
-    
 
     public class DbReadService
     {
@@ -20,7 +19,7 @@
             logger.LogInformation($"WOW {nameof(DbReadService)} created!");
         
         }
-
+        
 
         public IEnumerable<HistoricalTrade> GetHistoricalTrades(Expression<Func<HistoricalTrade, bool>> expression = null)  {
 
@@ -30,7 +29,12 @@
            return _currencyDbContext.HistoricalTrades.Where(expression);
         }
 
-
+        public BgServiceConfiguration GetBgServiceConfiguration() {
+            return _currencyDbContext
+                .BgServiceConfigurations
+                .OrderByDescending(x => x.ChangeDate)
+                .FirstOrDefault();
+        }
 
     }
 }

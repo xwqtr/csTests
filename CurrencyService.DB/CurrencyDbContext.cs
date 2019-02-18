@@ -27,5 +27,9 @@
         }
 
         public DbSet<HistoricalTrade> HistoricalTrades { get; set; }
+
+        public DbSet<BgServiceConfiguration> BgServiceConfigurations { get; set; }
     }
+
+
 }

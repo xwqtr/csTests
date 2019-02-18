@@ -6,3 +6,4 @@ C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcorea
 C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.2\GenericLibraryParser.AssemblyInfo.cs
 C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.2\GenericLibraryParser.dll
 C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.2\GenericLibraryParser.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\GenericLibraryParser\obj\Debug\netcoreapp2.2\GenericLibraryParser.csprojAssemblyReference.cache

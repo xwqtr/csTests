@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CurrencyService.WebApi.Models.BackgroundWorker
 {
-    public class BackgroundWorkerConfigurationViewModel : BackgroundWorkerConfiguration
+    public class BackgroundWorkerConfigurationViewModel : IBackgroundWorkerConfiguration
     {
+        public int SecondsInterval { get; set; }
     }
 }

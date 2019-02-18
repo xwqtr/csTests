@@ -28,10 +28,10 @@ namespace CurrencyService.BackgroundService
                .AddTransient<IApiAccessProvider, WebRequestBasedApiAccess>()
                .AddDbContext<CurrencyDbContext>(x => x.UseSqlServer(@"Server=V-ILSEKA\SQLEXPRESS;Database=Currencies;Trusted_Connection=True;"))
                .AddSingleton<DbWriteService>()
+               .AddSingleton<DbReadService>()
                .AddHostedService<CurrencyRefreshHostService>()
                .AddLogging();
             })
-            .ConfigureAppConfiguration(x=>x.AddJsonFile("config.json",false,reloadOnChange:true))
             .ConfigureLogging(x =>
             {
                 x.AddConsole();

@@ -13,23 +13,28 @@
     using System.Threading.Tasks;
     using Microsoft.Extensions.Configuration;
     using CurrencyService.BackgroundService.Common;
+    using CurrencyService.DB.Models;
 
     public class CurrencyRefreshHostService : IHostedService, IDisposable
     {
         private readonly IEnumerable<ICurrencyWebService> _currencyWebServices;
         private readonly DbWriteService _dbWrite;
+        private readonly DbReadService _dbReadService;
         private readonly ILogger _logger;
         private Timer _timer;
         private AutoResetEvent _autoEvent;
-        private readonly BackgroundWorkerConfiguration _configuration = new BackgroundWorkerConfiguration();
-        public CurrencyRefreshHostService(IServiceProvider sp, ILogger<CurrencyRefreshHostService> logger, IConfiguration configuration)
+        private IBackgroundWorkerConfiguration _configuration { get => this.GetConfiguration(); }
+        public CurrencyRefreshHostService(IServiceProvider sp, ILogger<CurrencyRefreshHostService> logger)
         {
-            configuration.Bind(_configuration);
             _currencyWebServices = sp.GetServices<ICurrencyWebService>();
             _dbWrite = sp.GetService<DbWriteService>();
+            _dbReadService = sp.GetService<DbReadService>();
             _logger = logger;
             _autoEvent = new AutoResetEvent(true);
+            
         }
+        private BgServiceConfiguration GetConfiguration() => _dbReadService.GetBgServiceConfiguration();
+
 
         public async void DoWork(object state)
         {
@@ -37,6 +42,7 @@
             _logger.LogInformation($"Thread:{Thread.CurrentThread.ManagedThreadId} started DoWork");
             _logger.LogInformation("Timed Background Service is working.");
             await RefreshDbData("ETH", "BTC");
+            _timer.Change(TimeSpan.FromSeconds(_configuration.SecondsInterval), TimeSpan.FromSeconds(_configuration.SecondsInterval));
             ((AutoResetEvent)state).Set();
             
             
@@ -47,6 +53,7 @@
         {
             _logger.LogInformation("Timed Background Service is starting.");
             _timer = new Timer(DoWork, _autoEvent, TimeSpan.Zero, TimeSpan.FromSeconds(_configuration.SecondsInterval));
+            
             return Task.CompletedTask;
 
         }

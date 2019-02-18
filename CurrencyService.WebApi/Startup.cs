@@ -41,6 +41,7 @@ namespace CurrencyService.WebApi
             services
                 .AddCors()
                 .AddScoped<DbReadService>()
+                .AddScoped<DbWriteService>()
                 .AddDbContext<CurrencyDbContext>(x => x.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Currencies;Trusted_Connection=True;"))
                 .AddLogging(x => x.AddConsole().AddDebug())
                 .AddMvc(x => x.EnableEndpointRouting = false)

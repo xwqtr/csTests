@@ -1435,10 +1435,12 @@
       },
       "CurrencyService.DB/1.0.0": {
         "dependencies": {
+          "CurrencyService.BackgroundService.Common": "1.0.0",
           "CurrencyService.Common": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.1"
         },
         "runtime": {
           "CurrencyService.DB.dll": {}

@@ -4,6 +4,7 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
+    using CurrencyService.BackgroundService.Common;
     using CurrencyService.Common.Interfaces;
     using CurrencyService.DB;
     using CurrencyService.DB.Models;
@@ -34,6 +35,12 @@
                     CurrencyToConvertName = x.CurrencyToConvertName
             });
             _currencyDbContext.HistoricalTrades.AddRange(hts);
+            _currencyDbContext.SaveChanges();
+        }
+
+        public void AddBgWorkerConfiguration<T>(T bgWorkerConfig) where T : IBackgroundWorkerConfiguration
+        {
+            _currencyDbContext.BgServiceConfigurations.Add(new BgServiceConfiguration() { SecondsInterval = bgWorkerConfig.SecondsInterval, ChangeDate = DateTime.Now });
             _currencyDbContext.SaveChanges();
         }
 

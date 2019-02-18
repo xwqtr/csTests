@@ -1,0 +1,4 @@
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Client\obj\Debug\netcoreapp2.2\CurrencyService.Client.csprojAssemblyReference.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Client\obj\Debug\netcoreapp2.2\CurrencyService.Client.csproj.CoreCompileInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Client\obj\Debug\netcoreapp2.2\CurrencyService.Client.AssemblyInfoInputs.cache
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Client\obj\Debug\netcoreapp2.2\CurrencyService.Client.AssemblyInfo.cs

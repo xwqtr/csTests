@@ -1,9 +1,9 @@
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Common\bin\Debug\netstandard2.0\CurrencyService.Common.deps.json
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Common\bin\Debug\netstandard2.0\CurrencyService.Common.dll
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Common\bin\Debug\netstandard2.0\CurrencyService.Common.pdb
-C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Common\obj\Debug\netstandard2.0\CurrencyService.Common.csprojAssemblyReference.cache
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Common\obj\Debug\netstandard2.0\CurrencyService.Common.csproj.CoreCompileInputs.cache
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Common\obj\Debug\netstandard2.0\CurrencyService.Common.AssemblyInfoInputs.cache
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Common\obj\Debug\netstandard2.0\CurrencyService.Common.AssemblyInfo.cs
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Common\obj\Debug\netstandard2.0\CurrencyService.Common.dll
 C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Common\obj\Debug\netstandard2.0\CurrencyService.Common.pdb
+C:\Users\v-ilseka\SelfImprovemet\csTests\CurrencyService.Common\obj\Debug\netstandard2.0\CurrencyService.Common.csprojAssemblyReference.cache
